@@ -701,6 +701,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1676064425, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
+      propertyPath: ShapeModule.m_Mesh
+      value: 
+      objectReference: {fileID: -4209270771707391599, guid: df878e3f0e43c4d488e410a313f49c48,
+        type: 3}
+    - target: {fileID: 1676064425, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2286332289017236069, guid: 9202a4721d0404a41988dbb323041a08,
         type: 3}
       propertyPath: m_Name
@@ -711,6 +720,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2286332289017236073, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286332289017236078, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -4209270771707391599, guid: df878e3f0e43c4d488e410a313f49c48,
+        type: 3}
     - target: {fileID: 2286332289017236079, guid: 9202a4721d0404a41988dbb323041a08,
         type: 3}
       propertyPath: m_RootOrder
