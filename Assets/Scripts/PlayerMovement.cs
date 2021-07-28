@@ -26,5 +26,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = Vector3.ClampMagnitude(new Vector3(x + z,0,z - x), 1.0f);
 
         controller.Move(move * Time.deltaTime * moveSpeed);
+
+        if (move.magnitude > 0)
+        {
+            transform.LookAt(transform.position + move);
+        }
+        
     }
 }
