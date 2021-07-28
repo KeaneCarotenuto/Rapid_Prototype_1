@@ -5,17 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public Transform groundCheck;
-    public float groundDistance;
-    public LayerMask groundMask;
 
     public float moveSpeed;
-    public float jumpHeight;
-
-    public float gravity;
 
     public Vector3 velocity;
-    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -26,25 +19,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = false;
-
-        Collider[] hits = Physics.OverlapSphere(groundCheck.position, groundDistance, groundMask);
-
-        foreach (Collider _hit in hits)
-        {
-            if (_hit.transform.root == gameObject.transform)
-            {
-                continue;
-            }
-
-            isGrounded = true;
-            break;
-        }
-
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -52,14 +26,5 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = Vector3.ClampMagnitude(new Vector3(x + z,0,z - x), 1.0f);
 
         controller.Move(move * Time.deltaTime * moveSpeed);
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
-
-        velocity.y += gravity * Time.deltaTime;
-
-        controller.Move(velocity * Time.deltaTime);
     }
 }
