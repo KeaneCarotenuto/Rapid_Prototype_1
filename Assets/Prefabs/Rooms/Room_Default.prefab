@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 9082308824022746037}
   - component: {fileID: 4125266068048594709}
   - component: {fileID: 3253448562973854320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 15
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0

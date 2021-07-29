@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -28,12 +29,22 @@ public class PlayerHealth : MonoBehaviour
 
             UpdateAppearance();
 
-            if (m_health <= 0)
-            {
-                dead = true;
-                m_health = 0;
-            }
+            if (m_health <= 0) Die();
         }
+    }
+
+    public void Die()
+    {
+        dead = true;
+        m_health = 0;
+        transform.LookAt(transform.position - transform.up);
+
+        Invoke("ReturnToMenu", 2);
+    }
+
+    void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void UpdateAppearance()

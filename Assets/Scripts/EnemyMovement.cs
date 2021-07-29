@@ -5,18 +5,27 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public GameObject player;
-    public NavMeshAgent selfAgent;
+    public GameObject m_player;
+    public PlayerHealth m_pHealth;
+    public NavMeshAgent m_selfAgent;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        m_player = GameObject.Find("Player");
+        m_pHealth = m_player.GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        selfAgent.SetDestination(player.transform.position);
+        if (!m_pHealth.dead)
+        {
+            m_selfAgent.SetDestination(m_player.transform.position);
+        }
+        else
+        {
+            m_selfAgent.isStopped = true;
+        }
     }
 }
