@@ -306,6 +306,7 @@ MonoBehaviour:
   m_AddScoreOnTimer: 1
   m_TimerScore: 10
   m_TimerDuration: 2
+  m_BurnScore: {fileID: 0}
 --- !u!1001 &486020966
 PrefabInstance:
   m_ObjectHideFlags: 0
