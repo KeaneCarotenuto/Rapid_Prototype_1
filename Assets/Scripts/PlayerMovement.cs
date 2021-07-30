@@ -5,61 +5,38 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public Transform groundCheck;
-    public float groundDistance;
-    public LayerMask groundMask;
 
-    public float moveSpeed;
-    public float jumpHeight;
+    public float m_moveSpeed;
 
-    public float gravity;
+    public Vector3 m_velocity;
 
-    public Vector3 velocity;
-    public bool isGrounded;
+    PlayerHealth m_healthComp;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_healthComp = GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        isGrounded = false;
-
-        Collider[] hits = Physics.OverlapSphere(groundCheck.position, groundDistance, groundMask);
-
-        foreach (Collider _hit in hits)
+        if (m_healthComp.dead)
         {
-            if (_hit.transform.root == gameObject.transform)
-            {
-                continue;
-            }
-
-            isGrounded = true;
-            break;
-        }
-
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
+            return;
         }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = Vector3.ClampMagnitude(new Vector3(x + z,0,z - x), 1.0f);
+        m_velocity = Vector3.ClampMagnitude(new Vector3(x + z,0,z - x), 1.0f) * m_moveSpeed;
 
-        controller.Move(move * Time.deltaTime * moveSpeed);
+        controller.Move(m_velocity * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (m_velocity.magnitude > 0)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            transform.LookAt(transform.position + m_velocity);
         }
-
-        velocity.y += gravity * Time.deltaTime;
-
-        controller.Move(velocity * Time.deltaTime);
+        
     }
 }
