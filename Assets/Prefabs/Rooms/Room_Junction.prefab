@@ -349,10 +349,10 @@ MonoBehaviour:
   m_Data: {fileID: 11400000, guid: 54581616bb70bd44bbb16b095194cddb, type: 2}
   m_RoomSize: 28
   m_DisplayGrid: 0
-  North: {fileID: 0}
-  South: {fileID: 0}
-  East: {fileID: 0}
-  West: {fileID: 0}
+  m_ConnectsNorth: 1
+  m_ConnectsSouth: 1
+  m_ConnectsEast: 1
+  m_ConnectsWest: 1
   m_GenerateNeighbors: 0
 --- !u!114 &5734889569535050717
 MonoBehaviour:
@@ -507,15 +507,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e60f5bcc15bcbda3e9c73561e09d91ca, type: 3}
---- !u!4 &4074737286948366514 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e60f5bcc15bcbda3e9c73561e09d91ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 4541570729986346841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3731108414339215880 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e60f5bcc15bcbda3e9c73561e09d91ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 4541570729986346841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4074737286948366514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e60f5bcc15bcbda3e9c73561e09d91ca,
     type: 3}
   m_PrefabInstance: {fileID: 4541570729986346841}
   m_PrefabAsset: {fileID: 0}

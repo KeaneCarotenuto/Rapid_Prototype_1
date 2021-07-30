@@ -6,6 +6,9 @@ public class Flamable : MonoBehaviour
 {
     public bool onFire = false;
 
+   
+
+
     public GameObject fire;
     public GameObject light;
 
@@ -13,13 +16,13 @@ public class Flamable : MonoBehaviour
     void Start()
     {
         gameObject.layer = 11;
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     private void OnParticleCollision(GameObject other)
