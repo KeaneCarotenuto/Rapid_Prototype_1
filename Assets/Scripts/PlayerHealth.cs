@@ -9,10 +9,16 @@ public class PlayerHealth : MonoBehaviour
 
     public bool dead = false;
 
+    Color copyCol;
+    Color copyParticleCol;
+    Color copyParticleEmmisionCol;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        copyCol = GetComponent<MeshRenderer>().material.color;
+        copyParticleCol = GetComponent<ParticleSystemRenderer>().material.color;
+        copyParticleEmmisionCol = GetComponent<ParticleSystemRenderer>().material.GetColor("_EmissionColor");
     }
 
     // Update is called once per frame
@@ -49,8 +55,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void UpdateAppearance()
     {
-        GetComponent<ParticleSystemRenderer>().material.color = new Color(m_health / 100.0f, 0, 0);
-        GetComponent<MeshRenderer>().material.color = new Color(m_health / 100.0f, 0, 0);
+        //Fix the alpha being changed on colour change
+
+        GetComponent<ParticleSystemRenderer>().material.color = copyParticleCol * (m_health / 100.0f);
+        GetComponent<ParticleSystemRenderer>().material.SetColor("_EmissionColor", copyParticleEmmisionCol * (m_health / 100.0f));
+        GetComponent<MeshRenderer>().material.color = copyCol * (m_health / 100.0f);
 
         ParticleSystem.VelocityOverLifetimeModule vel = GetComponent<ParticleSystem>().velocityOverLifetime;
         vel.speedModifierMultiplier = m_health / 100.0f;
