@@ -217,8 +217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PropList: {fileID: 11400000, guid: 320722f239f4c8a2f804ef9b11bd19d9, type: 2}
+  m_EnemyPrefab: {fileID: 4447853286181297604, guid: 402be655c1f470d48a296b560199532c,
+    type: 3}
   m_RoomSize: 28
-  m_TileNum: 5
+  m_TileNum: 9
 --- !u!1 &3661170317405013071
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +505,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7513297493162946847, guid: 8aa29ee43122887b084160c1dcf3e0bc, type: 3}
 --- !u!64 &1060837239541885704
