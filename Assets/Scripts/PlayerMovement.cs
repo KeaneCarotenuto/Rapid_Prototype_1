@@ -26,10 +26,10 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float z = -Input.GetAxis("Horizontal");
+        float x = Input.GetAxis("Vertical");
 
-        m_velocity = Vector3.ClampMagnitude(new Vector3(x + z,0,z - x), 1.0f) * m_moveSpeed;
+        m_velocity = Vector3.ClampMagnitude(new Vector3(x + z, 0, z - x), 1.0f) * m_moveSpeed;
 
         controller.Move(m_velocity * Time.deltaTime);
 
@@ -37,6 +37,6 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.LookAt(transform.position + m_velocity);
         }
-        
+
     }
 }
