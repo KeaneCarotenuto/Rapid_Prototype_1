@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
         m_velocity = Vector3.zero;
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space))
         {
             if (!m_anim.GetBool("isCharging")) m_anim.SetBool("isCharging", true);
         }
