@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class RoomEnterTrigger : MonoBehaviour
@@ -9,8 +11,6 @@ public class RoomEnterTrigger : MonoBehaviour
     public UnityEvent OnRoomTrigger;
     public UnityEvent OnRoomEnter;
     public UnityEvent OnRoomLeave;
-
-    
 
     public GameObject m_CameraHolder;
     public bool m_RoomTriggered = false;

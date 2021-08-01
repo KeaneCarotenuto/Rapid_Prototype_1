@@ -49,12 +49,12 @@ public class EnemySpawner : MonoBehaviour
 
                     if (Random.Range(0, 3) == 0)
                     {
-                        GameObject.Instantiate(m_PropList.Prefabs[Random.Range(0, m_PropList.Prefabs.Count)], tilepos - new Vector3(0, 1, 0), Quaternion.identity);
+                        GameObject.Instantiate(m_PropList.Prefabs[Random.Range(0, m_PropList.Prefabs.Count)], tilepos - new Vector3(0, 1, 0), Quaternion.identity, transform);
 
                     }
                     else if (Random.Range(0, 4) == 0)
                     {
-                        GameObject.Instantiate(m_EnemyPrefab, tilepos - new Vector3(0, 0, 0), Quaternion.identity);
+                        GameObject.Instantiate(m_EnemyPrefab, tilepos - new Vector3(0, 0, 0), Quaternion.identity, transform);
                     }
                 }
 
