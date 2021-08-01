@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class PlayerHealth : MonoBehaviour
 {
     public UnityEvent OnDeath;
+    public UnityEvent OnDamage;
     public float m_health = 100;
 
     public bool dead = false;
@@ -36,6 +37,8 @@ public class PlayerHealth : MonoBehaviour
             m_health -= _dmg;
 
             UpdateAppearance();
+
+            OnDamage.Invoke();
 
             if (m_health <= 0) Die();
         }

@@ -7,6 +7,9 @@ public class EnemySpawner : MonoBehaviour
 
     public PropList m_PropList;
     public GameObject m_EnemyPrefab;
+
+    public int m_SpawnChance;
+
     public float m_RoomSize;
     public int m_TileNum;
 
@@ -69,12 +72,12 @@ public class EnemySpawner : MonoBehaviour
                 {
                     Vector3 tilepos = this.transform.position - new Vector3((m_RoomSize / 2) - tilesize / 2, 0, (m_RoomSize / 2) - tilesize / 2) + new Vector3(i * tilesize, 0, j * tilesize);
 
-                    if (Random.Range(0, 3) == 0)
+                    if (Random.Range(0, 100) < m_SpawnChance)
                     {
                         GameObject.Instantiate(m_PropList.Prefabs[Random.Range(0, m_PropList.Prefabs.Count)], tilepos - new Vector3(0, 1, 0), Quaternion.identity, transform);
 
                     }
-                    else if (Random.Range(0, 4) == 0)
+                    else if (Random.Range(0, 100) < m_SpawnChance)
                     {
                         GameObject.Instantiate(m_EnemyPrefab, tilepos - new Vector3(0, 0, 0), Quaternion.identity, transform);
                     }

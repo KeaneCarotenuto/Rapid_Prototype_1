@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
 
+    public SoundController m_audio;
     public float m_moveSpeed;
 
     public Vector3 m_velocity;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position = new Vector3(transform.position.x, 0, transform.position.z);
         if (m_healthComp.dead)
         {
             return;
@@ -44,14 +46,8 @@ public class PlayerMovement : MonoBehaviour
             float x = Input.GetAxis("Vertical");
 
             m_velocity = Vector3.ClampMagnitude(new Vector3(x + z, 0, z - x), 1.0f) * m_moveSpeed;
-            if (transform.position.y > 0)
-            {
-                m_velocity += new Vector3(0, -5, 0);
-            }
-            else if (transform.position.y < 0)
-            {
-                transform.position = new Vector3(transform.position.x, 0, transform.position.z);
-            }
+
+
 
 
             controller.Move(m_velocity * Time.deltaTime);
@@ -60,11 +56,13 @@ public class PlayerMovement : MonoBehaviour
         if (m_velocity.magnitude > 0)
         {
             m_anim.SetBool("isWalking", true);
+            m_audio.SetRunning(false);
             transform.LookAt(transform.position + m_velocity);
         }
         else
         {
             m_anim.SetBool("isWalking", false);
+            m_audio.SetRunning(true);
         }
 
 

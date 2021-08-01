@@ -530,6 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PropList: {fileID: 0}
   m_EnemyPrefab: {fileID: 0}
+  m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 9
 --- !u!208 &4647867826746170363

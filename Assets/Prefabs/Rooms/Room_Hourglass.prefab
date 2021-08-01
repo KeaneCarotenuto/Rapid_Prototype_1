@@ -249,6 +249,7 @@ MonoBehaviour:
   m_PropList: {fileID: 11400000, guid: 320722f239f4c8a2f804ef9b11bd19d9, type: 2}
   m_EnemyPrefab: {fileID: 4447853286181297604, guid: 402be655c1f470d48a296b560199532c,
     type: 3}
+  m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 9
 --- !u!64 &4562397169524873573
