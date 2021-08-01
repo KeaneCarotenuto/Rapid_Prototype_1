@@ -1,25 +1,49 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    int m_Score;
-    public TMP_Text m_ScoreText;
-    public void AddScore(int _score)
+
+    public UnityEvent OnTimerElapse;
+    public float m_TimerDuration;
+    public float m_TimeSurvived = 0;
+    public int m_RoomsExplored = 0;
+
+    public int m_Score = 0;
+
+    public TMP_Text m_Text;
+    public Leaderboard m_leaderboard;
+    float m_Timer;
+
+    public void AddPoints(int _points)
     {
-        m_Score += _score;
+        m_Score += _points;
+    }
+
+    public void SaveScore()
+    {
+        m_leaderboard.AddScore(m_Score);
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_Timer = m_TimerDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_ScoreText.text = "Score: " + m_Score.ToString();
+        m_TimeSurvived += Time.deltaTime;
+        m_Timer -= Time.deltaTime;
+        if (m_Timer <= 0)
+        {
+            m_Timer = m_TimerDuration;
+            OnTimerElapse.Invoke();
+        }
+        m_Text.SetText("Score: " + m_Score.ToString());
+
     }
 }

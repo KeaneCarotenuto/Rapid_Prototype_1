@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public UnityEvent OnDeath;
     public float m_health = 100;
 
     public bool dead = false;
@@ -24,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TakeDamage(float _dmg)
@@ -44,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
         dead = true;
         m_health = 0;
         transform.LookAt(transform.position - transform.up);
-
+        OnDeath.Invoke();
         Invoke("ReturnToMenu", 2);
     }
 

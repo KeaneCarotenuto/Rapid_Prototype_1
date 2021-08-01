@@ -376,7 +376,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85e486ba8415f94c88323a8ee136ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ScoreText: {fileID: 1686559424}
+  OnTimerElapse:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TimerDuration: 0
+  m_TimeSurvived: 0
+  m_RoomsExplored: 0
+  m_Score: 0
+  m_Text: {fileID: 1686559424}
+  m_leaderboard: {fileID: 11400000, guid: e6592aacbc84f3f2bb390f1013781305, type: 2}
 --- !u!1 &1358049348
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +789,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1106574130}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
 --- !u!1001 &2658314410050840159
@@ -850,6 +888,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 2658314411548272163, guid: 6403161463bc84e4fad00dcd7bc49342,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6403161463bc84e4fad00dcd7bc49342, type: 3}
 --- !u!1001 &6888149445449681790
@@ -918,6 +961,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Room_Default
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522358054651552471, guid: e764bdd6bc4660247aeb2c006cf219d8,
+        type: 3}
+      propertyPath: m_TileNum
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8477859470353014084, guid: e764bdd6bc4660247aeb2c006cf219d8,
         type: 3}

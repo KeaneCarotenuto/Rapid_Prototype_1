@@ -22,7 +22,7 @@ public class ScoreAdder : MonoBehaviour
     {
         ScorePopup popup = GameObject.Instantiate(m_ScorePrefab, this.transform.position, Quaternion.Euler(35, 130, 0)).GetComponent<ScorePopup>();
         popup.m_Score = _score;
-        m_Manager.AddScore(_score);
+        m_Manager.AddPoints(_score);
     }
     // Start is called before the first frame update
     void Start()

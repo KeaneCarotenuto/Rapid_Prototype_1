@@ -44,6 +44,15 @@ public class PlayerMovement : MonoBehaviour
             float x = Input.GetAxis("Vertical");
 
             m_velocity = Vector3.ClampMagnitude(new Vector3(x + z, 0, z - x), 1.0f) * m_moveSpeed;
+            if (transform.position.y > 0)
+            {
+                m_velocity += new Vector3(0, -5, 0);
+            }
+            else if (transform.position.y < 0)
+            {
+                transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+            }
+
 
             controller.Move(m_velocity * Time.deltaTime);
         }
@@ -58,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
             m_anim.SetBool("isWalking", false);
         }
 
-        
+
 
     }
 }
