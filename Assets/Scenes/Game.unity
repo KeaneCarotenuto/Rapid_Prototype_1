@@ -550,6 +550,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49f77850bc11fa1489166e417d64143a, type: 3}
+--- !u!1 &692520857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 216451821349799445, guid: e764bdd6bc4660247aeb2c006cf219d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6888149445449681790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +766,12 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &964687919 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 793770775674750509, guid: 9202a4721d0404a41988dbb323041a08,
+    type: 3}
+  m_PrefabInstance: {fileID: 2286332287425871042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1106574128
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,32 +817,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ScoreText: {fileID: 1686559424}
---- !u!1 &1157244740 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3179812063345719167, guid: e764bdd6bc4660247aeb2c006cf219d8,
-    type: 3}
-  m_PrefabInstance: {fileID: 2286332287425871042}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1157244741
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157244740}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2800, y: 200, z: 2800}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1157244745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6522358054651552471, guid: e764bdd6bc4660247aeb2c006cf219d8,
     type: 3}
   m_PrefabInstance: {fileID: 6888149445449681790}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157244740}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 185b7f6659abf96fb8516abd5bc8f08c, type: 3}
@@ -1252,7 +1245,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 1981074531}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1823166105
 MeshCollider:
@@ -1426,6 +1419,7 @@ Transform:
   - {fileID: 705507995}
   - {fileID: 1505951869}
   - {fileID: 6888149445449681791}
+  - {fileID: 1823166104}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1643,7 +1637,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_anim
       value: 
-      objectReference: {fileID: 1127283660}
+      objectReference: {fileID: 964687919}
     - target: {fileID: 2286332289017236079, guid: 9202a4721d0404a41988dbb323041a08,
         type: 3}
       propertyPath: m_RootOrder
@@ -2050,7 +2044,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CameraHolder
       value: 
-      objectReference: {fileID: 6671909829845421419}
+      objectReference: {fileID: 692520857}
     - target: {fileID: 1316106899088141373, guid: e764bdd6bc4660247aeb2c006cf219d8,
         type: 3}
       propertyPath: OnRoomTrigger.m_PersistentCalls.m_Calls.Array.size
@@ -2099,7 +2093,7 @@ PrefabInstance:
     - target: {fileID: 6522358054651552471, guid: e764bdd6bc4660247aeb2c006cf219d8,
         type: 3}
       propertyPath: m_TileNum
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8371503525374118273, guid: e764bdd6bc4660247aeb2c006cf219d8,
         type: 3}
