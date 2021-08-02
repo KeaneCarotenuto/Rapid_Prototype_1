@@ -973,14 +973,24 @@ MonoBehaviour:
   m_GameStart: {fileID: 8300000, guid: ccf74e251a78e894b925fd85aef0a7db, type: 3}
   m_ScoreScreen: {fileID: 8300000, guid: f805ba88421a1264292f464d88321053, type: 3}
   m_AnnouncementList:
-  - {fileID: 8300000, guid: b6736f8cf91178046b20e23e7ad3f8c6, type: 3}
-  - {fileID: 8300000, guid: 7317acd719221184ca5805f07daa1cc8, type: 3}
-  - {fileID: 8300000, guid: 3f68832a259011e438aeaf33242ecfce, type: 3}
-  - {fileID: 8300000, guid: f03e751a8dc09a2479a92c4a3f3f1829, type: 3}
-  - {fileID: 8300000, guid: 8d2069853dcc1664e874e6189da9a26f, type: 3}
-  m_AnnouncementInterval: 60
+  - {fileID: 8300000, guid: b0cf631fc7cf6d6dca40b2835104bdc7, type: 3}
+  - {fileID: 8300000, guid: 8f14b0618e23c9cadb0257bc6980fe20, type: 3}
+  - {fileID: 8300000, guid: 2bd87ae4cfdf1e305b741f165a8502b1, type: 3}
+  - {fileID: 8300000, guid: e6c88996cb29a95659dbdbe875931479, type: 3}
+  - {fileID: 8300000, guid: d2c271a31a659ab84950d98e15218867, type: 3}
+  - {fileID: 8300000, guid: 9ee2d75f9b270a43c9061143556ed320, type: 3}
+  - {fileID: 8300000, guid: d9a8b2e1b56092922a297869921c56b7, type: 3}
+  - {fileID: 8300000, guid: ab3d8593411122850b88892f38371a7a, type: 3}
+  - {fileID: 8300000, guid: ec1ab985871b9701f8064962532350a8, type: 3}
+  - {fileID: 8300000, guid: 12d3b4a38031f1b53a4777b30f04a0d9, type: 3}
+  - {fileID: 8300000, guid: 544cbcef7cf0fed55bcbbbdd2fa69721, type: 3}
+  - {fileID: 8300000, guid: 41d6032b2add48793b38cd790c54b2e4, type: 3}
+  - {fileID: 8300000, guid: cd9d24f7b527a9ec0a5bc2db082ed39a, type: 3}
+  - {fileID: 8300000, guid: 24248d0c8a8fdcdd487d49504dc1bf34, type: 3}
+  - {fileID: 8300000, guid: bbc83314d843983ff81f600576a508bc, type: 3}
+  m_AnnouncementInterval: 30
   m_PlayAnnouncements: 1
-  m_AnnouncementChance: 30
+  m_AnnouncementChance: 100
 --- !u!4 &1194632284
 Transform:
   m_ObjectHideFlags: 0
