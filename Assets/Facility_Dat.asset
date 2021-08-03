@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: Facility_Dat
   m_EditorClassIdentifier: 
   m_RoomPrefabs:
-  - {fileID: 3179812063345719167, guid: e764bdd6bc4660247aeb2c006cf219d8, type: 3}
-  - {fileID: 1958493954585150673, guid: afcf6ac9a5553e54b9af15b0e6c2dad9, type: 3}
-  - {fileID: 8006207537867992457, guid: 02aa75eab89a087ed86b514ee3facc28, type: 3}
-  - {fileID: 6332802598485776617, guid: 2ab7882b0c88acdcfbe080dd62a6a471, type: 3}
+  - {fileID: 4077081763782370388, guid: 72aa44aa05c92514094df7f2deba2d23, type: 3}
