@@ -15,7 +15,7 @@ public class EnemyAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_particleSystem = GetComponent<ParticleSystem>();
+        //m_particleSystem = GetComponent<ParticleSystem>();
         m_emmision = m_particleSystem.emission;
         m_emmision.enabled = false;
 

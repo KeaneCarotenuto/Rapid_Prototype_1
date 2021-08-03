@@ -21,7 +21,17 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!m_pHealth.dead)
         {
-            m_selfAgent.SetDestination(m_player.transform.position);
+            if (Vector3.Distance(transform.position, m_player.transform.position) < 4)
+            {
+                m_selfAgent.isStopped = true;
+                transform.LookAt(new Vector3(m_player.transform.position.x, transform.position.y, m_player.transform.position.z));
+            }
+            else
+            {
+                m_selfAgent.isStopped = false;
+                m_selfAgent.SetDestination(m_player.transform.position);
+            }
+                
         }
         else
         {

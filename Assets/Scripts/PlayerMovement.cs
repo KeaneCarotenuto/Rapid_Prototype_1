@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
 
             controller.Move(m_velocity * Time.deltaTime);
+            controller.Move(new Vector3(0, -2, 0));
         }
 
         if (m_velocity.magnitude > 0)
