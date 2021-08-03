@@ -368,6 +368,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 466125774, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466125774, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
+      propertyPath: m_AddScoreOnTimer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2286332289017236069, guid: 9202a4721d0404a41988dbb323041a08,
         type: 3}
       propertyPath: m_Name
