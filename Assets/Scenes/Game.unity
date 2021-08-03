@@ -491,6 +491,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6927239120502963032, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7177296681095689033, guid: 72aa44aa05c92514094df7f2deba2d23,
         type: 3}
       propertyPath: m_DoorOpen

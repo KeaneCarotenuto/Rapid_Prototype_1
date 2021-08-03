@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 2121051483599492675}
   - component: {fileID: 3502467699909136286}
   - component: {fileID: -4991423788235972301}
+  - component: {fileID: 1561606669024128987}
   m_Layer: 0
   m_Name: Room_Square_05
   m_TagString: Untagged
@@ -356,6 +357,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1561606669024128987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5061949162318060086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 9c8db9acb14c02c40b7f9f4e440f1bbc, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &6041619579671872651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,12 +1540,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 154f2cf32f885f86ca4ffa8e10ef757c, type: 3}
---- !u!4 &8249950362649075679 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
-    type: 3}
-  m_PrefabInstance: {fileID: 6302339712359162962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8177628674761938428 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2741193951728546222, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
@@ -1527,6 +1552,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8249950362649075679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6302339712359162962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7053320749577142415
 PrefabInstance:
   m_ObjectHideFlags: 0
