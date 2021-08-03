@@ -8,7 +8,9 @@ public class Room : MonoBehaviour
     public float m_RoomSize = 0.0f;
     public bool m_DisplayGrid;
 
-    public List<Door> m_Doors;
+    
+
+    public Door DoorNorth, DoorSouth, DoorEast, DoorWest;
     public AudioClip m_DoorOpen, m_DoorClose;
     public AudioSource m_DoorAudio;
 
@@ -24,9 +26,37 @@ public class Room : MonoBehaviour
 
     public void SetDoorState(bool _state)
     {
-        foreach (var door in m_Doors)
+        if (m_ConnectsNorth && North.gameObject.GetComponent<Room>().m_ConnectsSouth)
         {
-            door.m_IsOpen = _state;
+            DoorNorth.m_IsOpen = _state;
+        }
+        else
+        {
+            DoorNorth.m_IsOpen = false;
+        }
+        if (m_ConnectsSouth && South.gameObject.GetComponent<Room>().m_ConnectsNorth)
+        {
+            DoorSouth.m_IsOpen = _state;
+        }
+        else
+        {
+            DoorSouth.m_IsOpen = false;
+        }
+        if (m_ConnectsEast && East.gameObject.GetComponent<Room>().m_ConnectsWest)
+        {
+            DoorEast.m_IsOpen = _state;
+        }
+        else
+        {
+            DoorEast.m_IsOpen = false;
+        }
+        if (m_ConnectsWest && West.gameObject.GetComponent<Room>().m_ConnectsEast)
+        {
+            DoorWest.m_IsOpen = _state;
+        }
+        else
+        {
+            DoorWest.m_IsOpen = false;
         }
         m_DoorAudio.clip = _state ? m_DoorOpen : m_DoorClose;
         m_DoorAudio.Play();
