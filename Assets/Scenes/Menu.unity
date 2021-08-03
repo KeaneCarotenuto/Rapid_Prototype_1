@@ -6527,8 +6527,8 @@ Transform:
   - {fileID: 603906878}
   - {fileID: 851222563}
   - {fileID: 1532845126}
-  - {fileID: 1579051160}
   - {fileID: 461484551}
+  - {fileID: 1579051160}
   m_Father: {fileID: 32484473}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51175,12 +51175,12 @@ Transform:
   - {fileID: 2084042681}
   - {fileID: 1652327660}
   - {fileID: 290592224}
-  - {fileID: 1473215429}
   - {fileID: 1536529399}
-  - {fileID: 124502783}
-  - {fileID: 980196897}
+  - {fileID: 1473215429}
   - {fileID: 707121998}
   - {fileID: 1203403109}
+  - {fileID: 124502783}
+  - {fileID: 980196897}
   m_Father: {fileID: 115988712}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
