@@ -5,8 +5,9 @@ using UnityEngine;
 public class Flamable : MonoBehaviour
 {
     public bool onFire = false;
-
-   
+    public bool explodable;
+    public float m_ExplosionTimer;
+    public GameObject m_ExplosionPrefab;
 
 
     public GameObject fire;
@@ -16,13 +17,24 @@ public class Flamable : MonoBehaviour
     void Start()
     {
         gameObject.layer = 11;
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        if (onFire && explodable)
+        {
+            if (m_ExplosionTimer <= 0)
+            {
+                GameObject.Instantiate(m_ExplosionPrefab, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                m_ExplosionTimer -= Time.deltaTime;
+            }
+        }
     }
 
     private void OnParticleCollision(GameObject other)
@@ -56,7 +68,7 @@ public class Flamable : MonoBehaviour
 
             if (!ps)
             {
-                GetComponent<MeshRenderer>().material.color *= 0.1f; 
+                GetComponent<MeshRenderer>().material.color *= 0.1f;
 
                 ps = gameObject.AddComponent<ParticleSystem>();
 
@@ -67,10 +79,10 @@ public class Flamable : MonoBehaviour
                 sm.shapeType = ParticleSystemShapeType.MeshRenderer;
                 sm.meshShapeType = ParticleSystemMeshShapeType.Triangle;
                 sm.meshRenderer = GetComponent<MeshRenderer>();
-                
+
             }
 
-            ps.Play(); 
+            ps.Play();
         }
     }
 }
