@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    public FacilityData m_Data;
+    public FacilityData m_NorthConnecting, m_SouthConnecting, m_EastConnecting, m_WestConnecting;
     public float m_RoomSize = 0.0f;
     public bool m_DisplayGrid;
 
@@ -17,6 +17,10 @@ public class Room : MonoBehaviour
     public bool m_ConnectsNorth, m_ConnectsSouth, m_ConnectsEast, m_ConnectsWest;
 
     public bool m_GenerateNeighbors = false;
+
+    public bool m_RoomCompleted = false;
+
+
 
     public void SetDoorState(bool _state)
     {
@@ -42,6 +46,7 @@ public class Room : MonoBehaviour
             m_GenerateNeighbors = false;
             GenerateNeighbors();
         }
+
     }
 
     public void CheckNeighbors()
@@ -97,22 +102,22 @@ public class Room : MonoBehaviour
         CheckNeighbors();
         if (North == null && m_ConnectsNorth)
         {
-            North = GameObject.Instantiate(m_Data.m_RoomPrefabs[Random.Range(0, m_Data.m_RoomPrefabs.Count - 1)], transform.position + new Vector3(m_RoomSize, 0, 0), this.transform.rotation);
+            North = GameObject.Instantiate(m_SouthConnecting.m_RoomPrefabs[Random.Range(0, m_SouthConnecting.m_RoomPrefabs.Count - 1)], transform.position + new Vector3(m_RoomSize, 0, 0), this.transform.rotation);
             North.GetComponent<Room>().South = this.gameObject;
         }
         if (South == null && m_ConnectsSouth)
         {
-            South = GameObject.Instantiate(m_Data.m_RoomPrefabs[Random.Range(0, m_Data.m_RoomPrefabs.Count - 1)], transform.position + new Vector3(-m_RoomSize, 0, 0), this.transform.rotation);
+            South = GameObject.Instantiate(m_NorthConnecting.m_RoomPrefabs[Random.Range(0, m_NorthConnecting.m_RoomPrefabs.Count - 1)], transform.position + new Vector3(-m_RoomSize, 0, 0), this.transform.rotation);
             South.GetComponent<Room>().North = this.gameObject;
         }
         if (East == null && m_ConnectsEast)
         {
-            East = GameObject.Instantiate(m_Data.m_RoomPrefabs[Random.Range(0, m_Data.m_RoomPrefabs.Count - 1)], transform.position + new Vector3(0, 0, -m_RoomSize), this.transform.rotation);
+            East = GameObject.Instantiate(m_WestConnecting.m_RoomPrefabs[Random.Range(0, m_WestConnecting.m_RoomPrefabs.Count - 1)], transform.position + new Vector3(0, 0, -m_RoomSize), this.transform.rotation);
             East.GetComponent<Room>().West = this.gameObject;
         }
         if (West == null && m_ConnectsWest)
         {
-            West = GameObject.Instantiate(m_Data.m_RoomPrefabs[Random.Range(0, m_Data.m_RoomPrefabs.Count - 1)], transform.position + new Vector3(0, 0, m_RoomSize), this.transform.rotation);
+            West = GameObject.Instantiate(m_EastConnecting.m_RoomPrefabs[Random.Range(0, m_EastConnecting.m_RoomPrefabs.Count - 1)], transform.position + new Vector3(0, 0, m_RoomSize), this.transform.rotation);
             West.GetComponent<Room>().East = this.gameObject;
         }
     }

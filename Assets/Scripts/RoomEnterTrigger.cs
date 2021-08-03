@@ -12,8 +12,12 @@ public class RoomEnterTrigger : MonoBehaviour
     public UnityEvent OnRoomEnter;
     public UnityEvent OnRoomLeave;
 
+    public UnityEvent OnRoomComplete;
+
     public GameObject m_CameraHolder;
     public bool m_RoomTriggered = false;
+
+    public bool m_RoomCompleted = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +27,15 @@ public class RoomEnterTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (m_RoomTriggered && !m_RoomCompleted)
+        {
+            EnemyMovement[] objects = FindObjectsOfType<EnemyMovement>();
+            if (objects.Length == 0)
+            {
+                m_RoomCompleted = true;
+                OnRoomComplete.Invoke();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

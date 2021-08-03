@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8981522820013464079}
   - component: {fileID: 5387941280116111836}
   - component: {fileID: 3479242186500829001}
+  - component: {fileID: 3489622334843076388}
   m_Layer: 11
   m_Name: barrel_bomb
   m_TagString: Untagged
@@ -131,3 +132,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1768548604556816332, guid: 1ab0d2b76a3b8524785e64a49b475562, type: 3}
+--- !u!114 &3489622334843076388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116566159894477824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e625bb29a5563749a0830e16644937d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScorePrefab: {fileID: 4742028603060094419, guid: e500d31da68ffcb4bb188d770ec47f63,
+    type: 3}
+  m_AddScoreOnTimer: 0
+  m_TimerScore: 2
+  m_TimerDuration: 0.5
+  m_BurnScore: {fileID: 8981522820013464079}

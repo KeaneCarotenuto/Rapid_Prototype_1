@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 30
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -756,14 +756,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582e3281ac7186c4da4d2e49c93ffa2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Data: {fileID: 11400000, guid: 54581616bb70bd44bbb16b095194cddb, type: 2}
+  m_NorthConnecting: {fileID: 11400000, guid: 1df689d0806d5a964a78edfe03c4abb4, type: 2}
+  m_SouthConnecting: {fileID: 11400000, guid: 6c38f9755d0e84882b8883c6a61f16a1, type: 2}
+  m_EastConnecting: {fileID: 11400000, guid: 46b864bc408b9dfca8fad187c97f7427, type: 2}
+  m_WestConnecting: {fileID: 11400000, guid: 432105540f3371b26b6bc55369731085, type: 2}
   m_RoomSize: 28
   m_DisplayGrid: 0
+  m_Doors: []
+  m_DoorOpen: {fileID: 0}
+  m_DoorClose: {fileID: 0}
+  m_DoorAudio: {fileID: 0}
   m_ConnectsNorth: 1
   m_ConnectsSouth: 1
   m_ConnectsEast: 0
   m_ConnectsWest: 0
   m_GenerateNeighbors: 0
+  m_RoomCompleted: 0
 --- !u!114 &5724440690047962244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,8 +837,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnRoomComplete:
+    m_PersistentCalls:
+      m_Calls: []
   m_CameraHolder: {fileID: 6787612876355249836}
   m_RoomTriggered: 0
+  m_RoomCompleted: 0
 --- !u!65 &3045173202792258483
 BoxCollider:
   m_ObjectHideFlags: 0
