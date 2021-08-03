@@ -211,6 +211,10 @@ MonoBehaviour:
   m_Data: {fileID: 11400000, guid: 54581616bb70bd44bbb16b095194cddb, type: 2}
   m_RoomSize: 28
   m_DisplayGrid: 0
+  m_Doors: []
+  m_DoorOpen: {fileID: 8300000, guid: 2d11374eb85866c4a8cb534e62a7f60b, type: 3}
+  m_DoorClose: {fileID: 8300000, guid: c8ec9ac8ca7f3f44bac9f0d65e7dc9e8, type: 3}
+  m_DoorAudio: {fileID: 0}
   m_ConnectsNorth: 0
   m_ConnectsSouth: 1
   m_ConnectsEast: 1
