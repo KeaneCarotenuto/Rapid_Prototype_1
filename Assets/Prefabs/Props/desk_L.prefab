@@ -1,131 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &785391455473676713
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3824067560020732867}
-  - component: {fileID: 4071668621933939462}
-  - component: {fileID: 687871420362477047}
-  m_Layer: 11
-  m_Name: Collision1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3824067560020732867
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785391455473676713}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4093603443820727226}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4071668621933939462
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785391455473676713}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4871144, y: 1.1594372, z: 5.454213}
-  m_Center: {x: -0.02291131, y: 0.55552244, z: 2.0460687}
---- !u!114 &687871420362477047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785391455473676713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7677c1e2a6ace54ca52ca098b7a0b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onFire: 0
-  explodable: 0
-  m_ExplosionTimer: 0
-  m_ExplosionPrefab: {fileID: 0}
-  fire: {fileID: 1972276695228626350, guid: f4daab8fcc45a034cae0df8196c7e90e, type: 3}
-  light: {fileID: 299406993971750416, guid: 6c01f9dba8890e04284676398bd74927, type: 3}
---- !u!1 &1441647757500269130
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3640707771845636378}
-  - component: {fileID: 5793615497043599962}
-  - component: {fileID: 6126040449013361601}
-  m_Layer: 11
-  m_Name: collision2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3640707771845636378
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441647757500269130}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4093603443820727226}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5793615497043599962
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441647757500269130}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.6379433, y: 1.0208058, z: 1.5403321}
-  m_Center: {x: -3.691627, y: 0.5773046, z: -0.03135693}
---- !u!114 &6126040449013361601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441647757500269130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7677c1e2a6ace54ca52ca098b7a0b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onFire: 0
-  explodable: 0
-  m_ExplosionTimer: 0
-  m_ExplosionPrefab: {fileID: 0}
-  fire: {fileID: 1972276695228626350, guid: f4daab8fcc45a034cae0df8196c7e90e, type: 3}
-  light: {fileID: 299406993971750416, guid: 6c01f9dba8890e04284676398bd74927, type: 3}
 --- !u!1 &3712292139056517376
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +11,8 @@ GameObject:
   - component: {fileID: 4093603443820727226}
   - component: {fileID: 1108093530616562719}
   - component: {fileID: 2919540338175504597}
+  - component: {fileID: 8263769573348311183}
+  - component: {fileID: 865411207813987331}
   m_Layer: 11
   m_Name: desk_L
   m_TagString: Untagged
@@ -154,9 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3824067560020732867}
-  - {fileID: 3640707771845636378}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -207,3 +81,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8263769573348311183
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712292139056517376}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4452485967551423180, guid: b78d5ecb51604ac42b77ead7e16cb1ae, type: 3}
+--- !u!114 &865411207813987331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712292139056517376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7677c1e2a6ace54ca52ca098b7a0b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onFire: 0
+  explodable: 0
+  m_ExplosionTimer: 0
+  m_ExplosionPrefab: {fileID: 0}
+  fire: {fileID: 1972276695228626350, guid: f4daab8fcc45a034cae0df8196c7e90e, type: 3}
+  light: {fileID: 299406993971750416, guid: 6c01f9dba8890e04284676398bd74927, type: 3}

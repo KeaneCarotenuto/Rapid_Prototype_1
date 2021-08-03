@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 7605973519025054657}
   - component: {fileID: 918228551711683830}
   - component: {fileID: 2398741598717029675}
+  - component: {fileID: 309701646033719872}
   m_Layer: 0
   m_Name: Corridor_Tri_01
   m_TagString: Untagged
@@ -326,6 +327,36 @@ MonoBehaviour:
   m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 5
+--- !u!114 &309701646033719872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336264401832376451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 2ac7c48dd45119d458af3683b58c0b6c, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &8705147014563252713
 GameObject:
   m_ObjectHideFlags: 0
