@@ -250,11 +250,10 @@ MonoBehaviour:
   m_WestConnecting: {fileID: 11400000, guid: 432105540f3371b26b6bc55369731085, type: 2}
   m_RoomSize: 28
   m_DisplayGrid: 0
-  m_Doors:
-  - {fileID: 5867622039532117691}
-  - {fileID: 2008181594122539470}
-  - {fileID: 7581931683694157303}
-  - {fileID: 1923810660044666762}
+  DoorNorth: {fileID: 2008181594122539470}
+  DoorSouth: {fileID: 5867622039532117691}
+  DoorEast: {fileID: 7581931683694157303}
+  DoorWest: {fileID: 1923810660044666762}
   m_DoorOpen: {fileID: 8300000, guid: 2d11374eb85866c4a8cb534e62a7f60b, type: 3}
   m_DoorClose: {fileID: 8300000, guid: c8ec9ac8ca7f3f44bac9f0d65e7dc9e8, type: 3}
   m_DoorAudio: {fileID: 6311885782349884295}
@@ -9594,6 +9593,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Doors
       objectReference: {fileID: 0}
+    - target: {fileID: 883863902374293408, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 s
+      objectReference: {fileID: 0}
     - target: {fileID: 3016611039146488991, guid: 35e1b3179a19e0e4484ae973432a567a,
         type: 3}
       propertyPath: m_RootOrder
@@ -9648,6 +9652,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3751929581532179692, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 e
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113723183471075541, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 n
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159815909552785041, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 w
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e1b3179a19e0e4484ae973432a567a, type: 3}

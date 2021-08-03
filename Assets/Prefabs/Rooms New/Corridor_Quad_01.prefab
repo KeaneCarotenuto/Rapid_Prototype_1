@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 7941285731734838917}
   - component: {fileID: 6029141283602200953}
   - component: {fileID: 2841285211834141574}
+  - component: {fileID: 3461733493016911162}
   m_Layer: 0
   m_Name: Corridor_Quad_01
   m_TagString: Untagged
@@ -661,11 +662,10 @@ MonoBehaviour:
   m_WestConnecting: {fileID: 11400000, guid: 432105540f3371b26b6bc55369731085, type: 2}
   m_RoomSize: 28
   m_DisplayGrid: 0
-  m_Doors:
-  - {fileID: 6164739291758269882}
-  - {fileID: 2251245747042474703}
-  - {fileID: 7915102885340976886}
-  - {fileID: 2185029819713453195}
+  DoorNorth: {fileID: 2251245747042474703}
+  DoorSouth: {fileID: 6164739291758269882}
+  DoorEast: {fileID: 7915102885340976886}
+  DoorWest: {fileID: 2185029819713453195}
   m_DoorOpen: {fileID: 8300000, guid: 2d11374eb85866c4a8cb534e62a7f60b, type: 3}
   m_DoorClose: {fileID: 8300000, guid: c8ec9ac8ca7f3f44bac9f0d65e7dc9e8, type: 3}
   m_DoorAudio: {fileID: 2841285211834141574}
@@ -797,6 +797,102 @@ MonoBehaviour:
   m_NavMeshData: {fileID: 23800000, guid: 8f414d68dbf0d0d4fbc1ed2e1ff69eb2, type: 2}
   m_BuildHeightMesh: 0
 --- !u!82 &2841285211834141574
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770470375931382573}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &3461733493016911162
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4477,6 +4573,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Doors
       objectReference: {fileID: 0}
+    - target: {fileID: 883863902374293408, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 s
+      objectReference: {fileID: 0}
     - target: {fileID: 3016611039146488991, guid: 35e1b3179a19e0e4484ae973432a567a,
         type: 3}
       propertyPath: m_RootOrder
@@ -4531,6 +4632,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3751929581532179692, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 e
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113723183471075541, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 n
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159815909552785041, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 w
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e1b3179a19e0e4484ae973432a567a, type: 3}

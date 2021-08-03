@@ -105,10 +105,8 @@ GameObject:
   - component: {fileID: 8672966998354952564}
   - component: {fileID: 2121051483599492675}
   - component: {fileID: 3502467699909136286}
-
   - component: {fileID: -4991423788235972301}
   - component: {fileID: 1561606669024128987}
-
   m_Layer: 0
   m_Name: Room_Square_05
   m_TagString: Untagged
@@ -130,6 +128,10 @@ Transform:
   - {fileID: 2285413485964539998}
   - {fileID: 2176047666682537160}
   - {fileID: 7053320750027174232}
+  - {fileID: 1139457212877252836}
+  - {fileID: 8249950362649075679}
+  - {fileID: 7178283810316644275}
+  - {fileID: 395427102011204673}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -151,10 +153,13 @@ MonoBehaviour:
   m_WestConnecting: {fileID: 11400000, guid: 432105540f3371b26b6bc55369731085, type: 2}
   m_RoomSize: 28
   m_DisplayGrid: 0
-  m_Doors: []
-  m_DoorOpen: {fileID: 0}
-  m_DoorClose: {fileID: 0}
-  m_DoorAudio: {fileID: 0}
+  DoorNorth: {fileID: 923617919470428871}
+  DoorSouth: {fileID: 8177628674761938428}
+  DoorEast: {fileID: 6962301970164622736}
+  DoorWest: {fileID: 467711408508169826}
+  m_DoorOpen: {fileID: 8300000, guid: 2d11374eb85866c4a8cb534e62a7f60b, type: 3}
+  m_DoorClose: {fileID: 8300000, guid: c8ec9ac8ca7f3f44bac9f0d65e7dc9e8, type: 3}
+  m_DoorAudio: {fileID: -4991423788235972301}
   m_ConnectsNorth: 1
   m_ConnectsSouth: 1
   m_ConnectsEast: 1
@@ -263,7 +268,6 @@ MonoBehaviour:
   m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 5
-
 --- !u!82 &-4991423788235972301
 AudioSource:
   m_ObjectHideFlags: 0
@@ -390,7 +394,6 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 9c8db9acb14c02c40b7f9f4e440f1bbc, type: 2}
   m_BuildHeightMesh: 0
-
 --- !u!1 &6041619579671872651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1221,6 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
-
 --- !u!1001 &2339347793014710220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1284,16 +1286,10 @@ PrefabInstance:
     - target: {fileID: 3332679230562279735, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
         type: 3}
       propertyPath: m_Name
-      value: DoorFBX2 (3)
+      value: DoorFBX2 w
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 154f2cf32f885f86ca4ffa8e10ef757c, type: 3}
---- !u!4 &395427102011204673 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2339347793014710220}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &467711408508169826 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2741193951728546222, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
@@ -1306,6 +1302,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &395427102011204673 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2339347793014710220}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3088331326336717673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1371,10 +1373,16 @@ PrefabInstance:
     - target: {fileID: 3332679230562279735, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
         type: 3}
       propertyPath: m_Name
-      value: DoorFBX2
+      value: DoorFBX2 n
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 154f2cf32f885f86ca4ffa8e10ef757c, type: 3}
+--- !u!4 &1139457212877252836 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3088331326336717673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &923617919470428871 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2741193951728546222, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
@@ -1387,12 +1395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1139457212877252836 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
-    type: 3}
-  m_PrefabInstance: {fileID: 3088331326336717673}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5086179854170231870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1458,7 +1460,7 @@ PrefabInstance:
     - target: {fileID: 3332679230562279735, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
         type: 3}
       propertyPath: m_Name
-      value: DoorFBX2 (2)
+      value: DoorFBX2 e
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 154f2cf32f885f86ca4ffa8e10ef757c, type: 3}
@@ -1545,10 +1547,16 @@ PrefabInstance:
     - target: {fileID: 3332679230562279735, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
         type: 3}
       propertyPath: m_Name
-      value: DoorFBX2 (1)
+      value: DoorFBX2 s
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 154f2cf32f885f86ca4ffa8e10ef757c, type: 3}
+--- !u!4 &8249950362649075679 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6302339712359162962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8177628674761938428 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2741193951728546222, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
@@ -1561,13 +1569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &8249950362649075679 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
-    type: 3}
-  m_PrefabInstance: {fileID: 6302339712359162962}
-  m_PrefabAsset: {fileID: 0}
-
 --- !u!1001 &7053320749577142415
 PrefabInstance:
   m_ObjectHideFlags: 0

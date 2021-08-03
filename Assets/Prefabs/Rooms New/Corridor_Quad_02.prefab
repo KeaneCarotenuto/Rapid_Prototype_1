@@ -1207,6 +1207,7 @@ GameObject:
   - component: {fileID: 2097352853732994254}
   - component: {fileID: -660430105494660374}
   - component: {fileID: 4106890116251206498}
+  - component: {fileID: -5853470699345975162}
   m_Layer: 0
   m_Name: Corridor_Quad_02
   m_TagString: Untagged
@@ -1250,11 +1251,10 @@ MonoBehaviour:
   m_WestConnecting: {fileID: 11400000, guid: 432105540f3371b26b6bc55369731085, type: 2}
   m_RoomSize: 28
   m_DisplayGrid: 0
-  m_Doors:
-  - {fileID: 334729678888317532}
-  - {fileID: 5626886491568176425}
-  - {fileID: 4391193550250127632}
-  - {fileID: 5727020084605082477}
+  DoorNorth: {fileID: 5626886491568176425}
+  DoorSouth: {fileID: 334729678888317532}
+  DoorEast: {fileID: 4391193550250127632}
+  DoorWest: {fileID: 5727020084605082477}
   m_DoorOpen: {fileID: 8300000, guid: 2d11374eb85866c4a8cb534e62a7f60b, type: 3}
   m_DoorClose: {fileID: 8300000, guid: c8ec9ac8ca7f3f44bac9f0d65e7dc9e8, type: 3}
   m_DoorAudio: {fileID: 4106890116251206498}
@@ -1492,6 +1492,102 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &-5853470699345975162
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7764117176272353638}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &9104075443586607067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,6 +1667,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Doors
       objectReference: {fileID: 0}
+    - target: {fileID: 883863902374293408, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 s
+      objectReference: {fileID: 0}
     - target: {fileID: 3016611039146488991, guid: 35e1b3179a19e0e4484ae973432a567a,
         type: 3}
       propertyPath: m_RootOrder
@@ -1626,20 +1727,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3751929581532179692, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 e
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113723183471075541, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 n
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159815909552785041, guid: 35e1b3179a19e0e4484ae973432a567a,
+        type: 3}
+      propertyPath: m_Name
+      value: DoorFBX2 w
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e1b3179a19e0e4484ae973432a567a, type: 3}
---- !u!114 &5727020084605082477 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5751653356838557192, guid: 35e1b3179a19e0e4484ae973432a567a,
-    type: 3}
-  m_PrefabInstance: {fileID: 48286348634901861}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2987764434052282874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3016611039146488991, guid: 35e1b3179a19e0e4484ae973432a567a,
@@ -1661,6 +1765,18 @@ MonoBehaviour:
 --- !u!114 &5626886491568176425 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5673756381421711436, guid: 35e1b3179a19e0e4484ae973432a567a,
+    type: 3}
+  m_PrefabInstance: {fileID: 48286348634901861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5727020084605082477 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5751653356838557192, guid: 35e1b3179a19e0e4484ae973432a567a,
     type: 3}
   m_PrefabInstance: {fileID: 48286348634901861}
   m_PrefabAsset: {fileID: 0}
