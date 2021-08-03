@@ -9,7 +9,8 @@ public class EnemySpawner : MonoBehaviour
     public GameObject m_EnemyPrefab;
 
     public int m_SpawnChance;
-
+    public bool m_ScaleChanceToDuration;
+    public ScoreManager m_ScoreManager;
     public float m_RoomSize;
     public int m_TileNum;
 
@@ -73,7 +74,11 @@ public class EnemySpawner : MonoBehaviour
 
                     Vector3 tilepos = this.transform.position - new Vector3((m_RoomSize / 2) - tilesize / 2, 0, (m_RoomSize / 2) - tilesize / 2) + new Vector3(i * tilesize, 0, j * tilesize);
 
-                    if (Random.Range(0, 100) < m_SpawnChance)
+                    if (Random.Range(0, 100) < m_SpawnChance && !m_ScaleChanceToDuration)
+                    {
+                        GameObject.Instantiate(m_EnemyPrefab, tilepos + new Vector3(0, 1, 0), Quaternion.identity, transform);
+                    }
+                    else if (Random.Range(0, 100) < (m_SpawnChance / (1200 - Mathf.Clamp( m_ScoreManager.m_TimeSurvived, 1, 1200))))
                     {
                         GameObject.Instantiate(m_EnemyPrefab, tilepos + new Vector3(0, 1, 0), Quaternion.identity, transform);
                     }
@@ -115,7 +120,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        m_ScoreManager = GameObject.FindObjectOfType<ScoreManager>();
     }
 
     // Update is called once per frame

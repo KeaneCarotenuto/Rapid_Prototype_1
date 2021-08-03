@@ -26,37 +26,50 @@ public class Room : MonoBehaviour
 
     public void SetDoorState(bool _state)
     {
-        if (m_ConnectsNorth && North.gameObject.GetComponent<Room>().m_ConnectsSouth)
+        GenerateNeighbors();
+        if (DoorNorth != null)
         {
-            DoorNorth.m_IsOpen = _state;
+            if (m_ConnectsNorth && North.gameObject.GetComponent<Room>().m_ConnectsSouth)
+            {
+                DoorNorth.m_IsOpen = _state;
+            }
+            else
+            {
+                DoorNorth.m_IsOpen = false;
+            }
         }
-        else
+        if (DoorSouth != null)
         {
-            DoorNorth.m_IsOpen = false;
+            if (m_ConnectsSouth && South.gameObject.GetComponent<Room>().m_ConnectsNorth)
+            {
+                DoorSouth.m_IsOpen = _state;
+            }
+            else
+            {
+                DoorSouth.m_IsOpen = false;
+            }
         }
-        if (m_ConnectsSouth && South.gameObject.GetComponent<Room>().m_ConnectsNorth)
+        if (DoorEast != null)
         {
-            DoorSouth.m_IsOpen = _state;
+            if (m_ConnectsEast && East.gameObject.GetComponent<Room>().m_ConnectsWest)
+            {
+                DoorEast.m_IsOpen = _state;
+            }
+            else
+            {
+                DoorEast.m_IsOpen = false;
+            }
         }
-        else
+        if (DoorWest != null)
         {
-            DoorSouth.m_IsOpen = false;
-        }
-        if (m_ConnectsEast && East.gameObject.GetComponent<Room>().m_ConnectsWest)
-        {
-            DoorEast.m_IsOpen = _state;
-        }
-        else
-        {
-            DoorEast.m_IsOpen = false;
-        }
-        if (m_ConnectsWest && West.gameObject.GetComponent<Room>().m_ConnectsEast)
-        {
-            DoorWest.m_IsOpen = _state;
-        }
-        else
-        {
-            DoorWest.m_IsOpen = false;
+            if (m_ConnectsWest && West.gameObject.GetComponent<Room>().m_ConnectsEast)
+            {
+                DoorWest.m_IsOpen = _state;
+            }
+            else
+            {
+                DoorWest.m_IsOpen = false;
+            }
         }
         m_DoorAudio.clip = _state ? m_DoorOpen : m_DoorClose;
         m_DoorAudio.Play();
