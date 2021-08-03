@@ -12,7 +12,17 @@ ModelImporter:
   - first:
       74: 4540250025106317447
     second: Armature|WALK
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fire_extinguisher_mat
+    second: {fileID: 2100000, guid: e7aa573703361ef4f81854063dc0c246, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scientist_mat
+    second: {fileID: 2100000, guid: f120adbf997bdac4d9457c03c8a43c2e, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
