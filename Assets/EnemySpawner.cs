@@ -33,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
                 bool isfloor = false;
                 bool isoccupied = false;
 
-                RaycastHit[] hits = Physics.BoxCastAll(tilepos, new Vector3(tilesize / 2, tilesize / 2, tilesize / 2), Vector3.up);
+                RaycastHit[] hits = Physics.BoxCastAll(tilepos, new Vector3(tilesize / 2, 1, tilesize / 2), Vector3.up);
                 foreach (var hit in hits)
                 {
                     if (hit.collider.gameObject.CompareTag("Floor"))
@@ -70,16 +70,12 @@ public class EnemySpawner : MonoBehaviour
             {
                 if (m_ValidTiles[i, j])
                 {
+
                     Vector3 tilepos = this.transform.position - new Vector3((m_RoomSize / 2) - tilesize / 2, 0, (m_RoomSize / 2) - tilesize / 2) + new Vector3(i * tilesize, 0, j * tilesize);
 
                     if (Random.Range(0, 100) < m_SpawnChance)
                     {
-                        GameObject.Instantiate(m_PropList.Prefabs[Random.Range(0, m_PropList.Prefabs.Count)], tilepos - new Vector3(0, 1, 0), Quaternion.identity, transform);
-
-                    }
-                    else if (Random.Range(0, 100) < m_SpawnChance)
-                    {
-                        GameObject.Instantiate(m_EnemyPrefab, tilepos - new Vector3(0, 0, 0), Quaternion.identity, transform);
+                        GameObject.Instantiate(m_EnemyPrefab, tilepos + new Vector3(0, 1, 0), Quaternion.identity, transform);
                     }
                 }
 
@@ -148,7 +144,7 @@ public class EnemySpawner : MonoBehaviour
                 Vector3 tilepos = this.transform.position - new Vector3((m_RoomSize / 2) - tilesize / 2, 0, (m_RoomSize / 2) - tilesize / 2) + new Vector3(i * tilesize, 0, j * tilesize);
 
 
-                Gizmos.DrawWireCube(tilepos, new Vector3(tilesize, tilesize, tilesize));
+                Gizmos.DrawWireCube(tilepos, new Vector3(tilesize, 2, tilesize));
 
             }
         }

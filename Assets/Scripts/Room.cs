@@ -8,13 +8,26 @@ public class Room : MonoBehaviour
     public float m_RoomSize = 0.0f;
     public bool m_DisplayGrid;
 
-    
+    public List<Door> m_Doors;
+    public AudioClip m_DoorOpen, m_DoorClose;
+    public AudioSource m_DoorAudio;
 
     GameObject North, South, East, West;
 
     public bool m_ConnectsNorth, m_ConnectsSouth, m_ConnectsEast, m_ConnectsWest;
 
     public bool m_GenerateNeighbors = false;
+
+    public void SetDoorState(bool _state)
+    {
+        foreach (var door in m_Doors)
+        {
+            door.m_IsOpen = _state;
+        }
+        m_DoorAudio.clip = _state ? m_DoorOpen : m_DoorClose;
+        m_DoorAudio.Play();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
