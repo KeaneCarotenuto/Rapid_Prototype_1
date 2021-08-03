@@ -816,11 +816,10 @@ GameObject:
   - component: {fileID: 7797496765435814302}
   - component: {fileID: 650111952935089833}
   - component: {fileID: 2662075596773797748}
-<<<<<<< HEAD
-=======
+
   - component: {fileID: 7777248125904660395}
   - component: {fileID: 218671782697450632}
->>>>>>> Keane
+
   m_Layer: 0
   m_Name: Room_Square_04
   m_TagString: Untagged
@@ -975,8 +974,7 @@ MonoBehaviour:
   m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 5
-<<<<<<< HEAD
-=======
+
 --- !u!82 &7777248125904660395
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1103,7 +1101,7 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 3618d98003574ca42a425469114745a8, type: 2}
   m_BuildHeightMesh: 0
->>>>>>> Keane
+
 --- !u!1 &8914756054794762818
 GameObject:
   m_ObjectHideFlags: 0

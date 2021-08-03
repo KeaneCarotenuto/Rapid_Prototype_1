@@ -1028,11 +1028,10 @@ GameObject:
   - component: {fileID: 5150498900765391597}
   - component: {fileID: 2470738866387578330}
   - component: {fileID: 1134323464532276231}
-<<<<<<< HEAD
-=======
+
   - component: {fileID: 30952664302270813}
   - component: {fileID: 56955998278232137}
->>>>>>> Keane
+
   m_Layer: 0
   m_Name: Room_Tri_01
   m_TagString: Untagged
@@ -1187,8 +1186,7 @@ MonoBehaviour:
   m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 5
-<<<<<<< HEAD
-=======
+
 --- !u!82 &30952664302270813
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1489,7 +1487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>> Keane
+
 --- !u!1001 &3389186464570326504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6590,8 +6588,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3389186466614792419}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-=======
+
 --- !u!1001 &7403511847742554231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6679,4 +6676,4 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7403511847742554231}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Keane
+

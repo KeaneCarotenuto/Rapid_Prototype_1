@@ -5293,11 +5293,10 @@ GameObject:
   - component: {fileID: 4805749894216511402}
   - component: {fileID: 2847005657213974685}
   - component: {fileID: 753972822037651776}
-<<<<<<< HEAD
-=======
+
   - component: {fileID: -7897671605600521204}
   - component: {fileID: 2333862858037296962}
->>>>>>> Keane
+
   m_Layer: 0
   m_Name: Room_Tri_03
   m_TagString: Untagged
@@ -5452,8 +5451,7 @@ MonoBehaviour:
   m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 5
-<<<<<<< HEAD
-=======
+
 --- !u!82 &-7897671605600521204
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5841,4 +5839,4 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6170104783571295468}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Keane
+

@@ -105,11 +105,10 @@ GameObject:
   - component: {fileID: 8943232697282153145}
   - component: {fileID: 1814759747036388750}
   - component: {fileID: 3808757315043476563}
-<<<<<<< HEAD
-=======
+
   - component: {fileID: -7669812541752775898}
   - component: {fileID: 8481888489874012378}
->>>>>>> Keane
+
   m_Layer: 0
   m_Name: Room_Tri_04
   m_TagString: Untagged
@@ -264,8 +263,7 @@ MonoBehaviour:
   m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 5
-<<<<<<< HEAD
-=======
+
 --- !u!82 &-7669812541752775898
 AudioSource:
   m_ObjectHideFlags: 0
@@ -392,7 +390,7 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: e5f7da6f321e83547ac2aafe9b4a4331, type: 2}
   m_BuildHeightMesh: 0
->>>>>>> Keane
+
 --- !u!1 &5031080626355548633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,8 +1311,7 @@ Transform:
   m_Father: {fileID: 7752760747572834614}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
-<<<<<<< HEAD
-=======
+
 --- !u!1001 &622040946721260045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1576,7 +1573,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4691197489609892731}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Keane
+
 --- !u!1001 &5031080626332022933
 PrefabInstance:
   m_ObjectHideFlags: 0

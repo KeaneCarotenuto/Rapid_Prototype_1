@@ -205,11 +205,10 @@ GameObject:
   - component: {fileID: 273795881690313239}
   - component: {fileID: 7421751290054370592}
   - component: {fileID: 5407527649455291645}
-<<<<<<< HEAD
-=======
+
   - component: {fileID: 4725858254523698690}
   - component: {fileID: 3980091561357774680}
->>>>>>> Keane
+
   m_Layer: 0
   m_Name: Room_Tri_02
   m_TagString: Untagged
@@ -364,8 +363,7 @@ MonoBehaviour:
   m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 5
-<<<<<<< HEAD
-=======
+
 --- !u!82 &4725858254523698690
 AudioSource:
   m_ObjectHideFlags: 0
@@ -492,7 +490,7 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 3bbc7cc9047037941948e46348e010d2, type: 2}
   m_BuildHeightMesh: 0
->>>>>>> Keane
+
 --- !u!1 &5628921625014182662
 GameObject:
   m_ObjectHideFlags: 0

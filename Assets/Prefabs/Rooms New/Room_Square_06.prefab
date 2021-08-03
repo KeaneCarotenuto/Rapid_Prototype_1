@@ -80,11 +80,10 @@ GameObject:
   - component: {fileID: 2400433513964600965}
   - component: {fileID: 4928029870223272370}
   - component: {fileID: 7608796147518435439}
-<<<<<<< HEAD
-=======
+
   - component: {fileID: -7625226099231642627}
   - component: {fileID: -8136964384619827495}
->>>>>>> Keane
+
   m_Layer: 0
   m_Name: Room_Square_06
   m_TagString: Untagged
@@ -239,8 +238,7 @@ MonoBehaviour:
   m_SpawnChance: 10
   m_RoomSize: 28
   m_TileNum: 5
-<<<<<<< HEAD
-=======
+
 --- !u!82 &-7625226099231642627
 AudioSource:
   m_ObjectHideFlags: 0
@@ -367,7 +365,7 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: e4ebd5b6e1489e240b4bbf3ca058ad09, type: 2}
   m_BuildHeightMesh: 0
->>>>>>> Keane
+
 --- !u!1 &3464165420545676461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,8 +1202,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-<<<<<<< HEAD
-=======
+
 --- !u!1001 &1123244500828458134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1467,7 +1464,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3684643250148723618}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Keane
+
 --- !u!1001 &8411472468864616576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8308,8 +8305,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8411472470979551385}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-=======
+
 --- !u!1001 &8678209250713018248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8397,4 +8393,4 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8678209250713018248}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Keane
+
