@@ -22,6 +22,9 @@ public class Door : MonoBehaviour
     void Update()
     {
         m_Anim.SetBool("Open", m_IsOpen);
+
         m_ColliderObj.SetActive(!m_IsOpen);
+
+        
     }
 }
