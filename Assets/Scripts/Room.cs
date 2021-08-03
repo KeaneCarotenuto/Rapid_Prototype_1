@@ -9,6 +9,8 @@ public class Room : MonoBehaviour
     public bool m_DisplayGrid;
 
     public List<Door> m_Doors;
+
+    public Door DoorNorth, DoorSouth, DoorEast, DoorWest;
     public AudioClip m_DoorOpen, m_DoorClose;
     public AudioSource m_DoorAudio;
 
