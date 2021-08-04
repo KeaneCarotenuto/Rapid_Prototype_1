@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
     public Image m_Bar;
     public Image m_Vignette;
+    public Image m_BlueVignette;
 
     Color copyParticleCol;
     Color copyParticleEmmisionCol;
@@ -42,6 +43,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!dead)
         {
+            if (m_BlueVignette.color.a >= 0) m_BlueVignette.color -= new Color(0, 0, 0, 0.005f);
+
             m_health -= _dmg;
 
             UpdateAppearance();
@@ -89,6 +92,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.layer == 12)
         {
+            if (m_BlueVignette.color.a <= 1) m_BlueVignette.color += new Color(0, 0, 0, 0.01f);
             TakeDamage(0.05f);
         }
     }
