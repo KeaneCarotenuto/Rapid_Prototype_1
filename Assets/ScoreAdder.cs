@@ -35,6 +35,10 @@ public class ScoreAdder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (m_Manager == null)
+        {
+            return;
+        }
         if (m_Flammable)
         {
             m_AddScoreOnTimer = m_BurnScore.onFire;

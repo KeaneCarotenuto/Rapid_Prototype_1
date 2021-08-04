@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be8e18025b6d2d1da8b61a6d65ee9fd, type: 3}
   m_Name: Leaderboard
   m_EditorClassIdentifier: 
-  m_Highscores: 
+  m_Highscores: c8000000c8000000c8000000c8000000c8000000c8000000
