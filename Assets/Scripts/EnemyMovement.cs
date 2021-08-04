@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
     public PlayerHealth m_pHealth;
     public NavMeshAgent m_selfAgent;
 
+    public Animator m_Anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +26,13 @@ public class EnemyMovement : MonoBehaviour
             if (Vector3.Distance(transform.position, m_player.transform.position) < 4)
             {
                 m_selfAgent.isStopped = true;
+                m_Anim.SetBool("IsWalking", false);
                 transform.LookAt(new Vector3(m_player.transform.position.x, transform.position.y, m_player.transform.position.z));
             }
             else
             {
                 m_selfAgent.isStopped = false;
+                m_Anim.SetBool("IsWalking", true);
                 m_selfAgent.SetDestination(m_player.transform.position);
             }
                 
@@ -36,6 +40,7 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             m_selfAgent.isStopped = true;
+            m_Anim.SetBool("IsWalking", false);
         }
     }
 }

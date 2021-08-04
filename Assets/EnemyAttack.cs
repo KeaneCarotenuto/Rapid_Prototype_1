@@ -12,6 +12,8 @@ public class EnemyAttack : MonoBehaviour
     public ParticleSystem m_particleSystem;
     ParticleSystem.EmissionModule m_emmision;
 
+    public Animator m_Anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,14 +34,15 @@ public class EnemyAttack : MonoBehaviour
 
         if (!m_pHealth.dead)
         {
-            if (Vector3.Distance(transform.position, m_player.transform.position) < 5)
+            if (Vector3.Distance(transform.position, m_player.transform.position) < 4)
             {
                 m_emmision.enabled = true;
+                m_Anim.SetBool("IsFiring", true);
             }
         }
         else
         {
-
+            m_Anim.SetBool("IsFiring", false);
         }
     }
 }
