@@ -4737,6 +4737,7 @@ GameObject:
   - component: {fileID: 4447853286181297614}
   - component: {fileID: 2092823094}
   - component: {fileID: 9023307478644085076}
+  - component: {fileID: 5061132142101656145}
   m_Layer: 12
   m_Name: Enemy
   m_TagString: Untagged
@@ -4892,7 +4893,37 @@ MonoBehaviour:
   dead: 0
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5061132142101656145}
+        m_MethodName: AddScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_HealthDrainMultiplier: 0
+--- !u!114 &5061132142101656145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447853286181297604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e625bb29a5563749a0830e16644937d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScorePrefab: {fileID: 4742028603060094419, guid: e500d31da68ffcb4bb188d770ec47f63,
+    type: 3}
+  m_AddScoreOnTimer: 0
+  m_TimerScore: 0
+  m_TimerDuration: 0
+  m_BurnScore: {fileID: 0}
 --- !u!95 &6949481674321493665
 Animator:
   serializedVersion: 3

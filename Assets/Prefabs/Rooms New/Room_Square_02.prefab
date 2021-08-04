@@ -451,7 +451,7 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 754e6ad7e08c7de42920ce1d5109be8b, type: 2}
   m_BuildHeightMesh: 0
---- !u!198 &3928371228738670464
+--- !u!198 &4200321203771953536
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5119,7 +5119,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &279739915452420637
+--- !u!199 &3480908827753171800
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -5315,7 +5315,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 3, z: 12.5}
   m_Center: {x: 13.5, y: 1.5, z: 7.75}
---- !u!198 &5999067698973905350
+--- !u!198 &8390468605472498571
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9983,7 +9983,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &643432032071737337
+--- !u!199 &4773728557953865553
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -10456,7 +10456,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 3, z: 12.5}
   m_Center: {x: 13.5, y: 1.5, z: 7.75}
---- !u!198 &548711714303810649
+--- !u!198 &3698674170022449460
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15124,7 +15124,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &1328513860800849659
+--- !u!199 &7634541628173431876
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -15265,7 +15265,7 @@ Transform:
   m_Father: {fileID: 38105991503260737}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &8676299680758764669
+--- !u!198 &3822513977580203044
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19933,7 +19933,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &5984247250221767972
+--- !u!199 &8729274828398271902
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
