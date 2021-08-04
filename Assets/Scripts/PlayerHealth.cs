@@ -56,6 +56,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
+        
+        
+
+
         dead = true;
         m_health = 0;
         transform.LookAt(transform.position - transform.up);

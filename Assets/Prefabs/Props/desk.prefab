@@ -100,6 +100,8 @@ MonoBehaviour:
   m_ExplosionPrefab: {fileID: 0}
   fire: {fileID: 1972276695228626350, guid: f4daab8fcc45a034cae0df8196c7e90e, type: 3}
   light: {fileID: 299406993971750416, guid: 6c01f9dba8890e04284676398bd74927, type: 3}
+  firstBurnObj: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+    type: 3}
 --- !u!114 &1284318124103964325
 MonoBehaviour:
   m_ObjectHideFlags: 0

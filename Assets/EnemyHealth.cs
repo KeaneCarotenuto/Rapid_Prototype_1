@@ -40,6 +40,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
+        ScoreAdder sa = GetComponent<ScoreAdder>();
+        if (sa) sa.AddScore(100);
         Instantiate(DeathExpl, transform.position, Quaternion.Euler(-90,0,0), null);
         Destroy(gameObject);
         dead = true;
