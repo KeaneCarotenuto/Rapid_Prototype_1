@@ -262,11 +262,11 @@ MonoBehaviour:
   m_PropList: {fileID: 11400000, guid: 320722f239f4c8a2f804ef9b11bd19d9, type: 2}
   m_EnemyPrefab: {fileID: 4447853286181297604, guid: 402be655c1f470d48a296b560199532c,
     type: 3}
-  m_SpawnChance: 10
-  m_ScaleChanceToDuration: 0
+  m_SpawnChance: 80
+  m_ScaleChanceToDuration: 1
   m_ScoreManager: {fileID: 0}
   m_RoomSize: 28
-  m_TileNum: 5
+  m_TileNum: 7
 --- !u!82 &-7625226099231642627
 AudioSource:
   m_ObjectHideFlags: 0

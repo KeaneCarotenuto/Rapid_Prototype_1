@@ -74,14 +74,14 @@ public class EnemySpawner : MonoBehaviour
 
                     Vector3 tilepos = this.transform.position - new Vector3((m_RoomSize / 2) - tilesize / 2, 0, (m_RoomSize / 2) - tilesize / 2) + new Vector3(i * tilesize, 0, j * tilesize);
 
-                    if (Random.Range(0, 100) < m_SpawnChance && !m_ScaleChanceToDuration)
+                    if (Random.Range(0, 100) < m_SpawnChance )
                     {
                         GameObject.Instantiate(m_EnemyPrefab, tilepos + new Vector3(0, 1, 0), Quaternion.identity, transform);
                     }
-                    else if (Random.Range(0, 100) < (m_SpawnChance / (1200 - Mathf.Clamp( m_ScoreManager.m_TimeSurvived, 1, 1200))))
-                    {
-                        GameObject.Instantiate(m_EnemyPrefab, tilepos + new Vector3(0, 1, 0), Quaternion.identity, transform);
-                    }
+                    // else if (Random.Range(0, 100) < (m_SpawnChance / (600 - Mathf.Clamp( m_ScoreManager.m_TimeSurvived, 1, 600))))
+                    // {
+                    //     GameObject.Instantiate(m_EnemyPrefab, tilepos + new Vector3(0, 1, 0), Quaternion.identity, transform);
+                    // }
                 }
 
 
@@ -126,7 +126,33 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (m_ScaleChanceToDuration)
+        {
+            if (m_ScoreManager.m_TimerDuration <= 60)
+            {
+                m_SpawnChance = 10;
+            }
+            else if (m_ScoreManager.m_TimerDuration <= 120)
+            {
+                m_SpawnChance = 20;
+            }
+            else if (m_ScoreManager.m_TimerDuration <= 180)
+            {
+                m_SpawnChance = 30;
+            }
+            else if (m_ScoreManager.m_TimerDuration <= 240)
+            {
+                m_SpawnChance = 40;
+            }
+            else if (m_ScoreManager.m_TimerDuration <= 300)
+            {
+                m_SpawnChance = 50;
+            }
+            else if (m_ScoreManager.m_TimerDuration <= 60)
+            {
+                m_SpawnChance = 60;
+            }
+        }
     }
 
     private void OnDrawGizmosSelected()

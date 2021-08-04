@@ -506,7 +506,7 @@ PrefabInstance:
     - target: {fileID: 5634091516267360764, guid: 72aa44aa05c92514094df7f2deba2d23,
         type: 3}
       propertyPath: m_SpawnChance
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5634091516267360764, guid: 72aa44aa05c92514094df7f2deba2d23,
         type: 3}
@@ -1368,7 +1368,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1866125265 stripped
 MonoBehaviour:
@@ -1579,6 +1579,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2523703867232478934, guid: bc0b09773ff5ad64d8b2c4a291d934cc,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 42987830849355546af325be697139ca,
+        type: 2}
+    - target: {fileID: 2523703867232478934, guid: bc0b09773ff5ad64d8b2c4a291d934cc,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5135059193935468071, guid: 42987830849355546af325be697139ca,
+        type: 2}
     - target: {fileID: 2523703867722024742, guid: bc0b09773ff5ad64d8b2c4a291d934cc,
         type: 3}
       propertyPath: m_Name
@@ -1637,6 +1649,11 @@ PrefabInstance:
     - target: {fileID: 2523703867722024743, guid: bc0b09773ff5ad64d8b2c4a291d934cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523703867974028371, guid: bc0b09773ff5ad64d8b2c4a291d934cc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2523703867974028382, guid: bc0b09773ff5ad64d8b2c4a291d934cc,
