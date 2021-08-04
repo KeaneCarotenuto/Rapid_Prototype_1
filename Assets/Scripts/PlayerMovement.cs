@@ -15,7 +15,9 @@ public class PlayerMovement : MonoBehaviour
 
     PlayerHealth m_healthComp;
 
-    bool isCharging;
+    public bool isCharging;
+
+    public LayerMask canCharge;
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +39,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space))
         {
             if (!m_anim.GetBool("isCharging")) m_anim.SetBool("isCharging", true);
+            isCharging = true;
         }
         else
         {
+            if (!m_anim.GetCurrentAnimatorStateInfo(0).IsName("Armature|RELEASE") && !m_anim.GetCurrentAnimatorStateInfo(0).IsName("Armature|CHARGE"))
+            {
+                isCharging = false;
+            }
+
             m_anim.SetBool("isCharging", false);
 
             float z = -Input.GetAxis("Horizontal");
@@ -59,6 +67,18 @@ public class PlayerMovement : MonoBehaviour
             m_anim.SetBool("isWalking", true);
             m_audio.SetRunning(false);
             transform.LookAt(transform.position + m_velocity);
+
+            if (isCharging)
+            {
+                Collider[] hits = Physics.OverlapSphere(transform.position, 1, canCharge);
+
+                foreach (Collider _col in hits)
+                {
+                    EnemyHealth eHealth = _col.GetComponent<EnemyHealth>();
+
+                    if (eHealth) eHealth.TakeDamage(100);
+                }
+            }
         }
         else
         {
