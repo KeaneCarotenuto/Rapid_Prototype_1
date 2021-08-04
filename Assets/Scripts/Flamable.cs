@@ -30,9 +30,9 @@ public class Flamable : MonoBehaviour
 
     void Awake()
     {
-# if UNITY_EDITOR
         ParticleSystem ps = GetComponent<ParticleSystem>();
 
+#if UNITY_EDITOR
         if (!ps)
         {
             ps = gameObject.AddComponent<ParticleSystem>();
