@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public UnityEvent OnDeath;
     public UnityEvent OnDamage;
     public float m_health = 100;
+    public float m_maxhealth = 100;
+
 
     public bool dead = false;
+
+    public Image m_Bar;
 
     Color copyCol;
     Color copyParticleCol;
@@ -27,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        m_Bar.fillAmount = m_health / m_maxhealth;
     }
 
     public void TakeDamage(float _dmg)
