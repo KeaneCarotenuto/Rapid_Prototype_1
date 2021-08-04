@@ -1,7 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
+using UnityEditor;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Flamable : MonoBehaviour
 {
     public bool onFire = false;
@@ -11,13 +15,44 @@ public class Flamable : MonoBehaviour
 
 
     public GameObject fire;
-    public GameObject light;
+    public new GameObject light;
+
+    private Color ogCol;
+
 
     // Start is called before the first frame update
     void Start()
     {
         gameObject.layer = 11;
 
+        ogCol = GetComponent<MeshRenderer>().material.color;
+    }
+
+    void Awake()
+    {
+        //this.enabled = true;
+
+        ParticleSystem ps = GetComponent<ParticleSystem>();
+
+#if UNITY_EDITOR
+        this.enabled = true;
+
+        if (!ps)
+        {
+            ps = gameObject.AddComponent<ParticleSystem>();
+
+        }
+
+        UnityEditorInternal.ComponentUtility.CopyComponent(fire.GetComponent<ParticleSystem>());
+        UnityEditorInternal.ComponentUtility.PasteComponentValues(ps);
+#endif
+
+        ParticleSystem.ShapeModule sm = ps.shape;
+        sm.shapeType = ParticleSystemShapeType.MeshRenderer;
+        sm.meshShapeType = ParticleSystemMeshShapeType.Triangle;
+        sm.meshRenderer = GetComponent<MeshRenderer>();
+
+        ps.Stop();
     }
 
     // Update is called once per frame
@@ -46,43 +81,37 @@ public class Flamable : MonoBehaviour
             ParticleSystem ps = GetComponent<ParticleSystem>();
             if (ps)
             {
-                if (GetComponentInChildren<Light>())
-                {
-                    GetComponentInChildren<Light>().enabled = false;
-                }
-
-                ps.Stop();
-                //Destroy(ps, 5);
-                onFire = false;
+                StopFire(ps);
             }
         }
         else if ((!GetComponent<ParticleSystem>() || (GetComponent<ParticleSystem>() && GetComponent<ParticleSystem>().isStopped)) && gameObject.layer == 11 && other.layer != 12)
         {
-            onFire = true;
-            gameObject.layer = 10;
-
-            if (GetComponentInChildren<Light>()) GetComponentInChildren<Light>().enabled = true;
-            else Instantiate(light, transform, false);
-
-            ParticleSystem ps = GetComponent<ParticleSystem>();
-
-            if (!ps)
-            {
-                GetComponent<MeshRenderer>().material.color *= 0.1f;
-
-                ps = gameObject.AddComponent<ParticleSystem>();
-
-                UnityEditorInternal.ComponentUtility.CopyComponent(fire.GetComponent<ParticleSystem>());
-                UnityEditorInternal.ComponentUtility.PasteComponentValues(ps);
-
-                ParticleSystem.ShapeModule sm = ps.shape;
-                sm.shapeType = ParticleSystemShapeType.MeshRenderer;
-                sm.meshShapeType = ParticleSystemMeshShapeType.Triangle;
-                sm.meshRenderer = GetComponent<MeshRenderer>();
-
-            }
-
-            ps.Play();
+            StartFire();
         }
+    }
+
+    public void StopFire(ParticleSystem ps)
+    {
+        if (GetComponentInChildren<Light>())
+        {
+            GetComponentInChildren<Light>().enabled = false;
+        }
+
+        ps.Stop();
+        onFire = false;
+    }
+
+    public void StartFire()
+    {
+        GetComponent<MeshRenderer>().material.color = ogCol * 0.1f;
+        onFire = true;
+        gameObject.layer = 10;
+
+        if (GetComponentInChildren<Light>()) GetComponentInChildren<Light>().enabled = true;
+        else Instantiate(light, transform, false);
+
+        ParticleSystem ps = GetComponent<ParticleSystem>();
+
+        ps.Play();
     }
 }
