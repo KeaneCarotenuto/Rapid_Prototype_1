@@ -17,8 +17,8 @@ public class ZoomOut : MonoBehaviour
     {
         if (doZoom)
         {
-            GetComponent<Camera>().orthographicSize *= 1.025f;
-            GetComponent<Camera>().farClipPlane *= 1.025f;
+            GetComponent<Camera>().orthographicSize *= 1.005f;
+            GetComponent<Camera>().farClipPlane *= 1.005f;
             
         }
     }

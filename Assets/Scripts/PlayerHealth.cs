@@ -19,6 +19,8 @@ public class PlayerHealth : MonoBehaviour
     public Image m_Vignette;
     public Image m_BlueVignette;
 
+    public GameObject deathScreen;
+
     Color copyParticleCol;
     Color copyParticleEmmisionCol;
 
@@ -37,6 +39,18 @@ public class PlayerHealth : MonoBehaviour
         m_Bar.fillAmount = m_health / m_maxhealth;
         m_Vignette.color = new Color(0,0,0, 1 - (m_health / m_maxhealth));
         TakeDamage(Time.deltaTime * m_HealthDrainMultiplier);
+
+        if (dead)
+        {
+            if (Input.GetButton("Fire1"))
+            {
+                ReturnToMenu();
+            }
+            if (Input.GetButton("Fire2"))
+            {
+                Quit();
+            }
+        }
     }
 
     public void TakeDamage(float _dmg)
@@ -69,12 +83,19 @@ public class PlayerHealth : MonoBehaviour
         m_health = 0;
         transform.LookAt(transform.position - transform.up);
         OnDeath.Invoke();
-        Invoke("ReturnToMenu", 5);
+
+        deathScreen.GetComponent<FadeIn>().StartFade();
+        //Invoke("ReturnToMenu", 5);
     }
 
-    void ReturnToMenu()
+    public void ReturnToMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
     public void UpdateAppearance()
@@ -92,7 +113,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.layer == 12)
         {
-            if (m_BlueVignette.color.a <= 1) m_BlueVignette.color += new Color(0, 0, 0, 0.01f);
+            if (m_BlueVignette.color.a <= 1) m_BlueVignette.color += new Color(0, 0, 0, 0.015f);
             TakeDamage(0.05f);
         }
     }
