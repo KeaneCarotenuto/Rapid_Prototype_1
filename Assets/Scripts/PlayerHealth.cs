@@ -84,6 +84,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        TakeDamage(0.05f);
+        if (other.layer == 12)
+        {
+            TakeDamage(0.05f);
+        }
     }
 }

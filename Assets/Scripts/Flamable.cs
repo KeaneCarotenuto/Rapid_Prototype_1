@@ -19,10 +19,11 @@ public class Flamable : MonoBehaviour
 
     private Color ogCol;
 
-
     // Start is called before the first frame update
     void Start()
     {
+        if (!Application.IsPlaying(gameObject)) return;
+
         gameObject.layer = 11;
 
         ogCol = GetComponent<MeshRenderer>().material.color;
@@ -58,6 +59,8 @@ public class Flamable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!Application.IsPlaying(gameObject)) return;
+
         if (onFire && explodable)
         {
             if (m_ExplosionTimer <= 0)
@@ -74,6 +77,8 @@ public class Flamable : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
+        if (!Application.IsPlaying(gameObject)) return;
+
         if (onFire && other.layer == 12)
         {
             gameObject.layer = 11;
@@ -92,6 +97,8 @@ public class Flamable : MonoBehaviour
 
     public void StopFire(ParticleSystem ps)
     {
+        if (!Application.IsPlaying(gameObject)) return;
+
         if (GetComponentInChildren<Light>())
         {
             GetComponentInChildren<Light>().enabled = false;
@@ -103,6 +110,8 @@ public class Flamable : MonoBehaviour
 
     public void StartFire()
     {
+        if (!Application.IsPlaying(gameObject)) return;
+
         GetComponent<MeshRenderer>().material.color = ogCol * 0.1f;
         onFire = true;
         gameObject.layer = 10;
