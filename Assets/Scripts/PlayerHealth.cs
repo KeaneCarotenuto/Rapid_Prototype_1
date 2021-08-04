@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     public bool dead = false;
 
     public Image m_Bar;
+    public Image m_Vignette;
 
     Color copyCol;
     Color copyParticleCol;
@@ -33,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         m_Bar.fillAmount = m_health / m_maxhealth;
+        m_Vignette.color = new Color(0,0,0, 1 - (m_health / m_maxhealth));
     }
 
     public void TakeDamage(float _dmg)
