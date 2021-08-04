@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8467310402898237537}
   - component: {fileID: 1964288469533827153}
   - component: {fileID: 1220286987770722459}
-  - component: {fileID: 2889220484026305734}
   - component: {fileID: 6850283890577641322}
   m_Layer: 0
   m_Name: EnemyDeath_Particle
@@ -108,7 +107,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -4814,22 +4813,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &2889220484026305734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146257641535535491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be8a77214b7fc1bb8a3f43f78549fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ExplosionRadius: 5
-  m_ForceMultiplier: 1500
-  m_ParticleSystem: {fileID: 1964288469533827153}
-  m_AudioSource: {fileID: 6850283890577641322}
 --- !u!82 &6850283890577641322
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4840,7 +4823,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 64dc4646d731bb74883258e504c0fee0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2a38674bed7b46b4d94b96562df7c698, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

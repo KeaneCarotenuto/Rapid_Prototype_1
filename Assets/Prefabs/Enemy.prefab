@@ -4906,6 +4906,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_HealthDrainMultiplier: 0
+  DeathExpl: {fileID: 4146257641535535491, guid: dc8f6cc02c7024a46a9e6ff4c13e3ed2,
+    type: 3}
 --- !u!114 &5061132142101656145
 MonoBehaviour:
   m_ObjectHideFlags: 0

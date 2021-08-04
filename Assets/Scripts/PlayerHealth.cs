@@ -18,7 +18,6 @@ public class PlayerHealth : MonoBehaviour
     public Image m_Bar;
     public Image m_Vignette;
 
-    Color copyCol;
     Color copyParticleCol;
     Color copyParticleEmmisionCol;
 
@@ -27,7 +26,6 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        copyCol = GetComponent<MeshRenderer>().material.color;
         copyParticleCol = GetComponent<ParticleSystemRenderer>().material.color;
         copyParticleEmmisionCol = GetComponent<ParticleSystemRenderer>().material.GetColor("_EmissionColor");
     }
@@ -76,7 +74,6 @@ public class PlayerHealth : MonoBehaviour
 
         GetComponent<ParticleSystemRenderer>().material.color = copyParticleCol * (m_health / 100.0f);
         GetComponent<ParticleSystemRenderer>().material.SetColor("_EmissionColor", copyParticleEmmisionCol * (m_health / 100.0f));
-        GetComponent<MeshRenderer>().material.color = copyCol * (m_health / 100.0f);
 
         ParticleSystem.VelocityOverLifetimeModule vel = GetComponent<ParticleSystem>().velocityOverLifetime;
         vel.speedModifierMultiplier = m_health / 100.0f;

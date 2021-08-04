@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public SoundController m_audio;
     public float m_moveSpeed;
+    public float COPY_moveSpeed;
 
     public Vector3 m_velocity;
 
@@ -19,9 +20,19 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask canCharge;
 
+    public GameObject dashParticle;
+
+    bool singleDash = true;
+
+    float lastDashTime = 0;
+
+    public float dashCooldown;
+
     // Start is called before the first frame update
     void Start()
     {
+        lastDashTime = -dashCooldown;
+        COPY_moveSpeed = m_moveSpeed;
         m_healthComp = GetComponent<PlayerHealth>();
     }
 
@@ -36,16 +47,35 @@ public class PlayerMovement : MonoBehaviour
 
         m_velocity = Vector3.zero;
 
-        if (Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space))
+        if ((Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space)) && Time.time - lastDashTime > dashCooldown)
         {
-            if (!m_anim.GetBool("isCharging")) m_anim.SetBool("isCharging", true);
+            
+            if (!m_anim.GetBool("isCharging"))
+            {
+                m_anim.SetBool("isCharging", true);
+            }
+            m_moveSpeed = COPY_moveSpeed * 2;
             isCharging = true;
+            singleDash = true;
         }
         else
         {
+            if (isCharging && singleDash)
+            {
+                singleDash = false;
+                lastDashTime = Time.time;
+                Destroy(Instantiate(dashParticle, transform.position, Quaternion.Euler(-90, 0, 0), null), 5);
+            }
+
             if (!m_anim.GetCurrentAnimatorStateInfo(0).IsName("Armature|RELEASE") && !m_anim.GetCurrentAnimatorStateInfo(0).IsName("Armature|CHARGE"))
             {
+                m_moveSpeed = COPY_moveSpeed;
                 isCharging = false;
+            }
+
+            if (m_anim.GetCurrentAnimatorStateInfo(0).IsName("Armature|RELEASE") && m_anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.5f)
+            {
+                m_moveSpeed = COPY_moveSpeed;
             }
 
             m_anim.SetBool("isCharging", false);

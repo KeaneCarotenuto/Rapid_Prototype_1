@@ -14,6 +14,8 @@ public class EnemyHealth : MonoBehaviour
 
     public float m_HealthDrainMultiplier;
 
+    public GameObject DeathExpl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,11 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
+        Instantiate(DeathExpl, transform.position, Quaternion.Euler(-90,0,0), null);
         Destroy(gameObject);
         dead = true;
         m_health = 0;
         transform.LookAt(transform.position - transform.up);
-        OnDeath.Invoke();
     }
 
     void OnCollisionEnter(Collision collision)
