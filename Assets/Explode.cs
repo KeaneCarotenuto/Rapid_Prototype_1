@@ -29,6 +29,10 @@ public class Explode : MonoBehaviour
         foreach (var hit in hits)
         {
 
+            EnemyHealth eHealth = hit.transform.GetComponent<EnemyHealth>();
+
+            if (eHealth) eHealth.TakeDamage(100);
+
             if (hit.collider.gameObject.GetComponent<Rigidbody>())
             {
                 hit.collider.gameObject.GetComponent<Rigidbody>().AddExplosionForce(m_ForceMultiplier, transform.position, m_ExplosionRadius);

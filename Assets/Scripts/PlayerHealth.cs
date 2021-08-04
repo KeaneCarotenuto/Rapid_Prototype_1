@@ -36,11 +36,14 @@ public class PlayerHealth : MonoBehaviour
         {
             m_health -= _dmg;
 
-            UpdateAppearance();
+            if (m_health <= 0)
+            {
+                Die();
+            }
 
             OnDamage.Invoke();
 
-            if (m_health <= 0) Die();
+            UpdateAppearance();
         }
     }
 
