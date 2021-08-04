@@ -19,6 +19,10 @@ public class Flamable : MonoBehaviour
 
     private Color ogCol;
 
+    bool m_firstBurn = true;
+
+    public GameObject firstBurnObj;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -110,6 +114,13 @@ public class Flamable : MonoBehaviour
 
     public void StartFire()
     {
+        if (m_firstBurn)
+        {
+            m_firstBurn = false;
+
+            Destroy(Instantiate(firstBurnObj, transform.position, Quaternion.identity, null), 5);
+        }
+
         if (!Application.IsPlaying(gameObject)) return;
 
         GetComponent<MeshRenderer>().material.color = ogCol * 0.1f;

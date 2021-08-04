@@ -5155,16 +5155,190 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2322572338498578792, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572338918953102, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572338924440769, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572338926875603, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572338955856854, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339027142227, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339057195170, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339191749696, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339292464417, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339499468585, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339578071183, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339599982603, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339737595662, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339827128891, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572339846889510, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 2322572340544544898, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 3387285417788910352, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 3387285417839533782, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 3387285418033676146, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 3387285418421807185, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 3387285418474536259, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 3387285418514170722, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 3387285418523728080, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 3387285418893132533, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 3387285419049630391, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
     - target: {fileID: 4077081763782370388, guid: 72aa44aa05c92514094df7f2deba2d23,
         type: 3}
       propertyPath: m_Name
       value: Room_Square_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4643043251164130065, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 4643043251498518012, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
+    - target: {fileID: 4643043251723102021, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
     - target: {fileID: 5275990539245173401, guid: 72aa44aa05c92514094df7f2deba2d23,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8c7de0b7aed35b845bbccb8423dac249, type: 2}
+    - target: {fileID: 6891712114706093659, guid: 72aa44aa05c92514094df7f2deba2d23,
+        type: 3}
+      propertyPath: firstBurnObj
+      value: 
+      objectReference: {fileID: 3173106313579301863, guid: 2cdb02469d698094eab59aa6e95a8ff6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72aa44aa05c92514094df7f2deba2d23, type: 3}
 --- !u!1 &341836551 stripped
