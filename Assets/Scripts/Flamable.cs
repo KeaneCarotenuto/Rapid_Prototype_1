@@ -77,67 +77,37 @@ public class Flamable : MonoBehaviour
             ParticleSystem ps = GetComponent<ParticleSystem>();
             if (ps)
             {
-                if (GetComponentInChildren<Light>())
-                {
-                    GetComponentInChildren<Light>().enabled = false;
-                }
-
-                ps.Stop();
-                //Destroy(ps, 5);
-                onFire = false;
+                StopFire(ps);
             }
         }
         else if ((!GetComponent<ParticleSystem>() || (GetComponent<ParticleSystem>() && GetComponent<ParticleSystem>().isStopped)) && gameObject.layer == 11 && other.layer != 12)
         {
-            GetComponent<MeshRenderer>().material.color = ogCol * 0.1f;
-            onFire = true;
-            gameObject.layer = 10;
-
-            if (GetComponentInChildren<Light>()) GetComponentInChildren<Light>().enabled = true;
-            else Instantiate(light, transform, false);
-
-            ParticleSystem ps = GetComponent<ParticleSystem>();
-
-            if (!ps)
-            {
-                GetComponent<MeshRenderer>().material.color *= 0.1f;
-
-                ps = gameObject.AddComponent<ParticleSystem>();
-
-                Type type = ps.GetType();
-
-                PropertyInfo[] pinfos = type.GetProperties();
-                foreach (var pinfo in pinfos)
-                {
-                    if (pinfo.CanWrite)
-                    {
-                        try
-                        {
-                            pinfo.SetValue(ps, pinfo.GetValue(fire.GetComponent<ParticleSystem>(), null), null);
-                        }
-                        catch { }
-                    }
-                }
-                FieldInfo[] finfos = type.GetFields();
-                foreach (var finfo in finfos)
-                {
-                    finfo.SetValue(ps, finfo.GetValue(fire.GetComponent<ParticleSystem>()));
-                }
-
-
-                //gameObject.AddComponent<ParticleSystem>(fire.GetComponent<ParticleSystem>());
-
-                //ComponentUtility.CopyComponent(fire.GetComponent<ParticleSystem>());
-                //UnityEditorInternal.ComponentUtility.PasteComponentValues(ps);
-
-                ParticleSystem.ShapeModule sm = ps.shape;
-                sm.shapeType = ParticleSystemShapeType.MeshRenderer;
-                sm.meshShapeType = ParticleSystemMeshShapeType.Triangle;
-                sm.meshRenderer = GetComponent<MeshRenderer>();
-
-            }
-
-            ps.Play();
+            StartFire();
         }
+    }
+
+    public void StopFire(ParticleSystem ps)
+    {
+        if (GetComponentInChildren<Light>())
+        {
+            GetComponentInChildren<Light>().enabled = false;
+        }
+
+        ps.Stop();
+        onFire = false;
+    }
+
+    public void StartFire()
+    {
+        GetComponent<MeshRenderer>().material.color = ogCol * 0.1f;
+        onFire = true;
+        gameObject.layer = 10;
+
+        if (GetComponentInChildren<Light>()) GetComponentInChildren<Light>().enabled = true;
+        else Instantiate(light, transform, false);
+
+        ParticleSystem ps = GetComponent<ParticleSystem>();
+
+        ps.Play();
     }
 }

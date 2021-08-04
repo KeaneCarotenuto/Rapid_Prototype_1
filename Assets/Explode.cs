@@ -39,7 +39,7 @@ public class Explode : MonoBehaviour
             }
             if (hit.collider.gameObject.GetComponent<Flamable>())
             {
-                hit.collider.gameObject.GetComponent<Flamable>().onFire = true;
+                hit.collider.gameObject.GetComponent<Flamable>().StartFire();
             }
 
         }
