@@ -793,29 +793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnRoomTrigger:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 555805472958366318}
-        m_MethodName: GenerateProps
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 555805472958366318}
-        m_MethodName: GenerateEnemies
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnRoomEnter:
     m_PersistentCalls:
       m_Calls:
@@ -879,6 +857,8 @@ MonoBehaviour:
   m_EnemyPrefab: {fileID: 4447853286181297604, guid: 402be655c1f470d48a296b560199532c,
     type: 3}
   m_SpawnChance: 10
+  m_ScaleChanceToDuration: 0
+  m_ScoreManager: {fileID: 0}
   m_RoomSize: 28
   m_TileNum: 5
 --- !u!114 &-8757919705088850332
