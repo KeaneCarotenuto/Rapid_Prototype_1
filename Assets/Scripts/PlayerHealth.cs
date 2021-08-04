@@ -56,7 +56,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-        
+        GameObject mc = GameObject.Find("Main Camera");
+        mc.GetComponent<ZoomOut>().StartZoom();
+        //Cinemachine.ICinemachineCamera cam = mc.GetComponent<Cinemachine.CinemachineBrain>().ActiveVirtualCamera;
         
 
 
@@ -64,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
         m_health = 0;
         transform.LookAt(transform.position - transform.up);
         OnDeath.Invoke();
-        Invoke("ReturnToMenu", 2);
+        Invoke("ReturnToMenu", 5);
     }
 
     void ReturnToMenu()
