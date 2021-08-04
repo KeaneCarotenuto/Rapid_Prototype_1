@@ -1,7 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
+using UnityEditor;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Flamable : MonoBehaviour
 {
     public bool onFire = false;
@@ -11,13 +15,40 @@ public class Flamable : MonoBehaviour
 
 
     public GameObject fire;
-    public GameObject light;
+    public new GameObject light;
+
+    private Color ogCol;
+
 
     // Start is called before the first frame update
     void Start()
     {
         gameObject.layer = 11;
 
+        ogCol = GetComponent<MeshRenderer>().material.color;
+    }
+
+    void Awake()
+    {
+# if UNITY_EDITOR
+        ParticleSystem ps = GetComponent<ParticleSystem>();
+
+        if (!ps)
+        {
+            ps = gameObject.AddComponent<ParticleSystem>();
+            
+        }
+
+        UnityEditorInternal.ComponentUtility.CopyComponent(fire.GetComponent<ParticleSystem>());
+        UnityEditorInternal.ComponentUtility.PasteComponentValues(ps);
+#endif
+
+        ParticleSystem.ShapeModule sm = ps.shape;
+        sm.shapeType = ParticleSystemShapeType.MeshRenderer;
+        sm.meshShapeType = ParticleSystemMeshShapeType.Triangle;
+        sm.meshRenderer = GetComponent<MeshRenderer>();
+
+        ps.Stop();
     }
 
     // Update is called once per frame
@@ -58,6 +89,7 @@ public class Flamable : MonoBehaviour
         }
         else if ((!GetComponent<ParticleSystem>() || (GetComponent<ParticleSystem>() && GetComponent<ParticleSystem>().isStopped)) && gameObject.layer == 11 && other.layer != 12)
         {
+            GetComponent<MeshRenderer>().material.color = ogCol * 0.1f;
             onFire = true;
             gameObject.layer = 10;
 
@@ -72,8 +104,31 @@ public class Flamable : MonoBehaviour
 
                 ps = gameObject.AddComponent<ParticleSystem>();
 
-                UnityEditorInternal.ComponentUtility.CopyComponent(fire.GetComponent<ParticleSystem>());
-                UnityEditorInternal.ComponentUtility.PasteComponentValues(ps);
+                Type type = ps.GetType();
+
+                PropertyInfo[] pinfos = type.GetProperties();
+                foreach (var pinfo in pinfos)
+                {
+                    if (pinfo.CanWrite)
+                    {
+                        try
+                        {
+                            pinfo.SetValue(ps, pinfo.GetValue(fire.GetComponent<ParticleSystem>(), null), null);
+                        }
+                        catch { }
+                    }
+                }
+                FieldInfo[] finfos = type.GetFields();
+                foreach (var finfo in finfos)
+                {
+                    finfo.SetValue(ps, finfo.GetValue(fire.GetComponent<ParticleSystem>()));
+                }
+
+
+                //gameObject.AddComponent<ParticleSystem>(fire.GetComponent<ParticleSystem>());
+
+                //ComponentUtility.CopyComponent(fire.GetComponent<ParticleSystem>());
+                //UnityEditorInternal.ComponentUtility.PasteComponentValues(ps);
 
                 ParticleSystem.ShapeModule sm = ps.shape;
                 sm.shapeType = ParticleSystemShapeType.MeshRenderer;
