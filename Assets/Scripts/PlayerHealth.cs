@@ -22,6 +22,8 @@ public class PlayerHealth : MonoBehaviour
     Color copyParticleCol;
     Color copyParticleEmmisionCol;
 
+    public float m_HealthDrainMultiplier;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
     {
         m_Bar.fillAmount = m_health / m_maxhealth;
         m_Vignette.color = new Color(0,0,0, 1 - (m_health / m_maxhealth));
+        m_health -= Time.deltaTime * m_HealthDrainMultiplier; 
     }
 
     public void TakeDamage(float _dmg)
@@ -48,6 +51,8 @@ public class PlayerHealth : MonoBehaviour
             OnDamage.Invoke();
 
             if (m_health <= 0) Die();
+            if (m_health >= m_maxhealth) m_health = m_maxhealth;
+            
         }
     }
 

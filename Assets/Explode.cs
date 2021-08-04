@@ -25,9 +25,16 @@ public class Explode : MonoBehaviour
     {
         m_ParticleSystem.Play();
         m_AudioSource.Play();
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position, m_ExplosionRadius, Vector3.up, LayerMask.GetMask("Flamable") | LayerMask.GetMask("Prop") | LayerMask.GetMask("Enemy"));
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, m_ExplosionRadius, Vector3.up, LayerMask.GetMask("Flamable") | LayerMask.GetMask("Prop") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Player"));
         foreach (var hit in hits)
         {
+
+            PlayerHealth pHealth = hit.transform.GetComponent<PlayerHealth>();
+
+            if (pHealth)
+            {
+                pHealth.TakeDamage(-20);
+            }
 
             EnemyHealth eHealth = hit.transform.GetComponent<EnemyHealth>();
 
