@@ -260,7 +260,8 @@ MonoBehaviour:
   quit: {fileID: 191785296}
   A: {fileID: 1010958729}
   B: {fileID: 345062734}
-  fadeSpeed: 0.01
+  fadeSpeed: 0.005
+  fadeOffset: 2.5
 --- !u!1 &1010958727
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +879,17 @@ MonoBehaviour:
           m_StringArgument: DEATH
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 466125774}
+        m_MethodName: StopCounting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamage:
     m_PersistentCalls:
       m_Calls:
@@ -894,6 +906,7 @@ MonoBehaviour:
         m_CallState: 2
   m_health: 100
   m_maxhealth: 100
+  m_anim: {fileID: 793770775674750509}
   dead: 0
   m_Bar: {fileID: 1959807954630057384}
   m_Vignette: {fileID: 7260843542981658474}

@@ -63063,6 +63063,18 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 210904994}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1603486926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 466125774, guid: 9202a4721d0404a41988dbb323041a08,
+    type: 3}
+  m_PrefabInstance: {fileID: 2286332287425871042}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e625bb29a5563749a0830e16644937d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1686228092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3545963028883461288, guid: 72aa44aa05c92514094df7f2deba2d23,
@@ -91640,6 +91652,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 570456319, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
+      propertyPath: fadeSpeed
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 570456319, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
+      propertyPath: fadeOffset
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2286332289017236069, guid: 9202a4721d0404a41988dbb323041a08,
         type: 3}
       propertyPath: m_Name
@@ -91702,9 +91722,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
         type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 866749060}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1603486926}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StopCounting
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
 --- !u!1001 &2523703866620197910

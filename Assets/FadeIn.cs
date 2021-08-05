@@ -14,6 +14,9 @@ public class FadeIn : MonoBehaviour
     bool fade = false;
 
     public float fadeSpeed = 0.01f;
+    public float fadeOffset = 1.5f;
+
+    float startTime = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +30,7 @@ public class FadeIn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fade)
+        if (Time.time - startTime >= fadeOffset && fade)
         {
             if (gameOver.color.a <= 1) gameOver.color += new Color(0, 0, 0, fadeSpeed);
             if (start.color.a <= 1) start.color += new Color(0, 0, 0, fadeSpeed);
@@ -39,6 +42,7 @@ public class FadeIn : MonoBehaviour
 
     public void StartFade()
     {
+        startTime = Time.time;
         fade = true;
     }
 }

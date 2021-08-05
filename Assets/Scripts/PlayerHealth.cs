@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public float m_health = 100;
     public float m_maxhealth = 100;
 
-
+    public Animator m_anim;
     public bool dead = false;
 
     public Image m_Bar;
@@ -77,15 +77,14 @@ public class PlayerHealth : MonoBehaviour
         mc.GetComponent<ZoomOut>().StartZoom();
         //Cinemachine.ICinemachineCamera cam = mc.GetComponent<Cinemachine.CinemachineBrain>().ActiveVirtualCamera;
         
-
-
         dead = true;
+        m_anim.SetBool("isDead", true);
+
         m_health = 0;
-        transform.LookAt(transform.position - transform.up);
+
         OnDeath.Invoke();
 
         deathScreen.GetComponent<FadeIn>().StartFade();
-        //Invoke("ReturnToMenu", 5);
     }
 
     public void ReturnToMenu()

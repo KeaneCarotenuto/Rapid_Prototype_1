@@ -18,6 +18,8 @@ public class ScoreManager : MonoBehaviour
     public Leaderboard m_leaderboard;
     float m_Timer;
 
+    bool keepCounting = true;
+
     public void AddPoints(int _points)
     {
         m_Score += _points;
@@ -25,25 +27,31 @@ public class ScoreManager : MonoBehaviour
 
     public void SaveScore()
     {
+        keepCounting = false;
         m_leaderboard.AddScore(m_Score);
     }
     // Start is called before the first frame update
     void Start()
     {
+        keepCounting = true;
         m_Timer = m_TimerDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_TimeSurvived += Time.deltaTime;
-        m_Timer -= Time.deltaTime;
-        if (m_Timer <= 0)
+        if (keepCounting)
         {
-            m_Timer = m_TimerDuration;
-            OnTimerElapse.Invoke();
+            m_TimeSurvived += Time.deltaTime;
+            m_Timer -= Time.deltaTime;
+            if (m_Timer <= 0)
+            {
+                m_Timer = m_TimerDuration;
+                OnTimerElapse.Invoke();
+            }
+            m_Text.SetText("Score: " + m_Score.ToString());
         }
-        m_Text.SetText("Score: " + m_Score.ToString());
+        
 
     }
 }

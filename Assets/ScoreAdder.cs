@@ -18,6 +18,8 @@ public class ScoreAdder : MonoBehaviour
     public Flamable m_BurnScore;
     bool m_Flammable;
 
+    bool keepCounting = true;
+
     public void AddScore(int _score)
     {
         ScorePopup popup = GameObject.Instantiate(m_ScorePrefab, this.transform.position, Quaternion.Euler(35, 130, 0)).GetComponent<ScorePopup>();
@@ -32,10 +34,15 @@ public class ScoreAdder : MonoBehaviour
         m_Flammable = (m_BurnScore != null);
     }
 
+    public void StopCounting()
+    {
+        keepCounting = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (m_Manager == null)
+        if (!keepCounting || m_Manager == null)
         {
             return;
         }
@@ -45,8 +52,6 @@ public class ScoreAdder : MonoBehaviour
         }
         if (m_AddScoreOnTimer)
         {
-
-
             m_Timer -= Time.deltaTime;
             if (m_Timer <= 0)
             {
