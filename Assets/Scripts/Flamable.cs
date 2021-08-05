@@ -23,6 +23,11 @@ public class Flamable : MonoBehaviour
 
     public GameObject firstBurnObj;
 
+    float startTime = float.MaxValue;
+    float maxTime = 5;
+
+    bool burntOut = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +70,12 @@ public class Flamable : MonoBehaviour
     {
         if (!Application.IsPlaying(gameObject)) return;
 
+        if (!explodable && Time.time - startTime > maxTime)
+        {
+            burntOut = true;
+            StopFire();
+        }
+
         if (onFire && explodable)
         {
             if (m_ExplosionTimer <= 0)
@@ -87,11 +98,7 @@ public class Flamable : MonoBehaviour
         {
             gameObject.layer = 11;
 
-            ParticleSystem ps = GetComponent<ParticleSystem>();
-            if (ps)
-            {
-                StopFire(ps);
-            }
+            StopFire();
         }
         else if ((!GetComponent<ParticleSystem>() || (GetComponent<ParticleSystem>() && GetComponent<ParticleSystem>().isStopped)) && gameObject.layer == 11 && other.layer != 12)
         {
@@ -99,7 +106,7 @@ public class Flamable : MonoBehaviour
         }
     }
 
-    public void StopFire(ParticleSystem ps)
+    public void StopFire()
     {
         if (!Application.IsPlaying(gameObject)) return;
 
@@ -108,14 +115,20 @@ public class Flamable : MonoBehaviour
             GetComponentInChildren<Light>().enabled = false;
         }
 
-        ps.Stop();
+        ParticleSystem ps = GetComponent<ParticleSystem>();
+
+        if (ps) ps.Stop();
         onFire = false;
     }
 
     public void StartFire()
     {
+        if (burntOut) return;
+
         if (m_firstBurn)
         {
+            startTime = Time.time;
+
             m_firstBurn = false;
 
             Destroy(Instantiate(firstBurnObj, transform.position, Quaternion.identity, null), 5);
