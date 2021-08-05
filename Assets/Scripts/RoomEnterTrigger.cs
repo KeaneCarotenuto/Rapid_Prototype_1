@@ -17,11 +17,13 @@ public class RoomEnterTrigger : MonoBehaviour
     public GameObject m_CameraHolder;
     public bool m_RoomTriggered = false;
 
+    BoxCollider m_roomcollider;
+
     public bool m_RoomCompleted = false;
     // Start is called before the first frame update
     void Start()
     {
-
+        m_roomcollider = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -29,8 +31,16 @@ public class RoomEnterTrigger : MonoBehaviour
     {
         if (m_RoomTriggered && !m_RoomCompleted)
         {
-            EnemyMovement[] objects = FindObjectsOfType<EnemyMovement>();
-            if (objects.Length == 0)
+            RaycastHit[] hits = Physics.BoxCastAll(this.transform.position, new Vector3(28, 28, 28), Vector3.up, Quaternion.identity, LayerMask.GetMask("Enemy"));
+            bool foundenemy = false;
+            foreach (var hit in hits)
+            {
+                if (hit.collider.gameObject.GetComponent<EnemyHealth>())
+                {
+                    foundenemy = true;
+                }
+            }
+            if (!foundenemy)
             {
                 m_RoomCompleted = true;
                 OnRoomComplete.Invoke();
