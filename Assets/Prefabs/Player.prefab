@@ -853,6 +853,7 @@ MonoBehaviour:
   dashParticle: {fileID: 7513324540805637320, guid: a2d8d9707cb2c8f4d82f5c04aecadb3b,
     type: 3}
   dashCooldown: 1.5
+  dashSpeed: 2
 --- !u!114 &5917535543123898513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21178,6 +21179,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2286332289017236079}
     m_Modifications:
+    - target: {fileID: 299406993971750414, guid: 6c01f9dba8890e04284676398bd74927,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 299406993971750415, guid: 6c01f9dba8890e04284676398bd74927,
         type: 3}
       propertyPath: m_RootOrder
