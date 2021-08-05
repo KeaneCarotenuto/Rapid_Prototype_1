@@ -386,10 +386,10 @@ MonoBehaviour:
   m_PropList: {fileID: 11400000, guid: 320722f239f4c8a2f804ef9b11bd19d9, type: 2}
   m_EnemyPrefab: {fileID: 4447853286181297604, guid: 402be655c1f470d48a296b560199532c,
     type: 3}
-  m_SpawnChance: 10
+  m_SpawnChance: 40
   m_ScaleChanceToDuration: 0
   m_ScoreManager: {fileID: 0}
-  m_RoomSize: 28
+  m_RoomSize: 9.6
   m_TileNum: 5
 --- !u!82 &4725858254523698690
 AudioSource:
@@ -6368,12 +6368,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 154f2cf32f885f86ca4ffa8e10ef757c, type: 3}
---- !u!4 &4956316160883590553 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
-    type: 3}
-  m_PrefabInstance: {fileID: 7044617175137680916}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5172714708549554106 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2741193951728546222, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
@@ -6386,6 +6380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &4956316160883590553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2669472080856939405, guid: 154f2cf32f885f86ca4ffa8e10ef757c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7044617175137680916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8708352657301791568
 PrefabInstance:
   m_ObjectHideFlags: 0

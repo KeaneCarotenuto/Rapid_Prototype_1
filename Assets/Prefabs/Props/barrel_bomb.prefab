@@ -152,7 +152,7 @@ MonoBehaviour:
     type: 3}
   m_AddScoreOnTimer: 0
   m_TimerScore: 2
-  m_TimerDuration: 0.5
+  m_TimerDuration: 4
   m_BurnScore: {fileID: 8981522820013464079}
 --- !u!198 &6850178389875961621
 ParticleSystem:

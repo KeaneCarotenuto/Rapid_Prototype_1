@@ -91702,10 +91702,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
         type: 3}
+      propertyPath: m_HealthDrainMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917535543123898513, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 866749060}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 466125774, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9202a4721d0404a41988dbb323041a08, type: 3}
 --- !u!1001 &2523703866620197910
 PrefabInstance:
