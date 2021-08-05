@@ -23,6 +23,12 @@ public class Explode : MonoBehaviour
     }
     private void Start()
     {
+        GameObject cam = GameObject.Find("Main Camera");
+        if (cam)
+        {
+            cam.GetComponent<Shake>().LongShake(5, 0.5f);
+        }
+
         m_ParticleSystem.Play();
         m_AudioSource.Play();
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, m_ExplosionRadius, Vector3.up, LayerMask.GetMask("Flamable") | LayerMask.GetMask("Prop") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Player"));

@@ -26,9 +26,12 @@ public class PlayerHealth : MonoBehaviour
 
     public float m_HealthDrainMultiplier;
 
+    GameObject cam;
+
     // Start is called before the first frame update
     void Start()
     {
+        cam = GameObject.Find("Main Camera");
         copyParticleCol = GetComponent<ParticleSystemRenderer>().material.color;
         copyParticleEmmisionCol = GetComponent<ParticleSystemRenderer>().material.GetColor("_EmissionColor");
     }
@@ -113,6 +116,11 @@ public class PlayerHealth : MonoBehaviour
         if (other.layer == 12)
         {
             if (m_BlueVignette.color.a <= 1) m_BlueVignette.color += new Color(0, 0, 0, 0.015f);
+            
+            if (cam)
+            {
+                cam.GetComponent<Shake>().ShakeCam(1);
+            }
             TakeDamage(0.05f);
         }
     }
