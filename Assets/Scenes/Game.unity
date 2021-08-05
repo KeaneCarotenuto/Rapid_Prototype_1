@@ -91679,6 +91679,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2286332289017236074, guid: 9202a4721d0404a41988dbb323041a08,
+        type: 3}
+      propertyPath: dashSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2286332289017236079, guid: 9202a4721d0404a41988dbb323041a08,
         type: 3}
       propertyPath: m_RootOrder

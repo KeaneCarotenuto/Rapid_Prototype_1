@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     float lastDashTime = 0;
 
     public float dashCooldown;
+    public float dashSpeed = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -49,12 +50,8 @@ public class PlayerMovement : MonoBehaviour
 
         if ((Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space)) && Time.time - lastDashTime > dashCooldown)
         {
-            
-            if (!m_anim.GetBool("isCharging"))
-            {
-                m_anim.SetBool("isCharging", true);
-            }
-            m_moveSpeed = COPY_moveSpeed * 2;
+
+            m_anim.SetBool("isCharging", true);
             isCharging = true;
             singleDash = true;
         }
@@ -62,13 +59,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isCharging && singleDash)
             {
+                float newSpeed = COPY_moveSpeed * dashSpeed * 4 * m_anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
+                m_moveSpeed = Mathf.Clamp(newSpeed, COPY_moveSpeed, COPY_moveSpeed * dashSpeed);
+                m_anim.SetBool("isCharging", false);
                 singleDash = false;
                 lastDashTime = Time.time;
                 Destroy(Instantiate(dashParticle, transform.position, Quaternion.Euler(-90, 0, 0), null), 5);
             }
 
             if (!m_anim.GetCurrentAnimatorStateInfo(0).IsName("Armature|RELEASE") && !m_anim.GetCurrentAnimatorStateInfo(0).IsName("Armature|CHARGE"))
-            {
+            { 
                 m_moveSpeed = COPY_moveSpeed;
                 isCharging = false;
             }
@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
                 m_moveSpeed = COPY_moveSpeed;
             }
 
-            m_anim.SetBool("isCharging", false);
+            
 
             float z = -Input.GetAxis("Horizontal");
             float x = Input.GetAxis("Vertical");
