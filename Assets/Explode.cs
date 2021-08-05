@@ -26,7 +26,8 @@ public class Explode : MonoBehaviour
         GameObject cam = GameObject.Find("Main Camera");
         if (cam)
         {
-            cam.GetComponent<Shake>().LongShake(5, 0.5f);
+            Shake shake = cam.GetComponent<Shake>();
+            if (shake) shake.LongShake(5, 0.5f);
         }
 
         m_ParticleSystem.Play();

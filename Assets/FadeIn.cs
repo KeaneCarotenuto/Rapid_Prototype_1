@@ -42,11 +42,11 @@ public class FadeIn : MonoBehaviour
 
     public void StartFade()
     {
-        gameOver.enabled = true;
-        start.enabled = true;
-        quit.enabled = true;
-        A.enabled = true;
-        B.enabled = true;
+        gameOver.gameObject.SetActive(true);
+        start.gameObject.SetActive(true);
+        quit.gameObject.SetActive(true);
+        A.gameObject.SetActive(true);
+        B.gameObject.SetActive(true);
 
         startTime = Time.time;
         fade = true;

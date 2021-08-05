@@ -18,7 +18,8 @@ public class Shake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Cinemachine.CinemachineBrain>().ManualUpdate();
+        Cinemachine.CinemachineBrain cmb = GetComponent<Cinemachine.CinemachineBrain>();
+        if (cmb) cmb.ManualUpdate();
         if (lsTime > 0)
         {
             lsTime -= Time.deltaTime;
