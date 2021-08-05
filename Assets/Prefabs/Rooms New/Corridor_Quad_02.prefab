@@ -43,7 +43,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 9.1
+  m_Intensity: 4
   m_Range: 40.9
   m_SpotAngle: 99.6
   m_InnerSpotAngle: 21.80208
@@ -1754,9 +1754,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5727020084605082477 stripped
+--- !u!114 &4391193550250127632 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5751653356838557192, guid: 35e1b3179a19e0e4484ae973432a567a,
+  m_CorrespondingSourceObject: {fileID: 4349117595518467189, guid: 35e1b3179a19e0e4484ae973432a567a,
     type: 3}
   m_PrefabInstance: {fileID: 48286348634901861}
   m_PrefabAsset: {fileID: 0}
@@ -1766,9 +1766,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cacf56419028dc5aa576d307993a2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4391193550250127632 stripped
+--- !u!114 &5727020084605082477 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4349117595518467189, guid: 35e1b3179a19e0e4484ae973432a567a,
+  m_CorrespondingSourceObject: {fileID: 5751653356838557192, guid: 35e1b3179a19e0e4484ae973432a567a,
     type: 3}
   m_PrefabInstance: {fileID: 48286348634901861}
   m_PrefabAsset: {fileID: 0}

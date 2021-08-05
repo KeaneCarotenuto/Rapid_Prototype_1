@@ -31,7 +31,7 @@ public class RoomEnterTrigger : MonoBehaviour
     {
         if (m_RoomTriggered && !m_RoomCompleted)
         {
-            RaycastHit[] hits = Physics.BoxCastAll(this.transform.position, new Vector3(28, 28, 28), Vector3.up, Quaternion.identity, LayerMask.GetMask("Enemy"));
+            RaycastHit[] hits = Physics.BoxCastAll(this.transform.position, new Vector3(14, 14, 14), Vector3.up, Quaternion.identity, LayerMask.GetMask("Enemy"));
             bool foundenemy = false;
             foreach (var hit in hits)
             {
