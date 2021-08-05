@@ -12,6 +12,8 @@ public class ZoomOut : MonoBehaviour
         
     }
 
+    Vector3 ogPos;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -19,12 +21,15 @@ public class ZoomOut : MonoBehaviour
         {
             GetComponent<Camera>().orthographicSize *= 1.005f;
             GetComponent<Camera>().farClipPlane *= 1.005f;
-            
+            transform.position = ogPos - transform.forward * GetComponent<Camera>().farClipPlane;
+
+
         }
     }
 
     public void StartZoom()
     {
+        ogPos = transform.position + transform.forward * GetComponent<Camera>().farClipPlane;
         transform.position -= transform.forward * 100;
         doZoom = true;
         Destroy(GetComponent<Cinemachine.CinemachineBrain>());
